@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>About Me</title>
+        <link rel="stylesheet" href="/static/global.css" />
+        <link rel="stylesheet" href="/static/me.css" />
+    </head>
+    <body>
+        <nav class="nav-bar">
+            <div class="nav-content">
+                <div id="logo">
+                    <a href="index.html"
+                        ><img
+                            class="logo"
+                            src="/static/images/logo.png"
+                            alt="logo of Jarvis Brown Initials"
+                    /></a>
+                </div>
+
+                <ul class="nav-menu">
+                    <li class="nav_item">
+                        <a href="/work.html" class="nav-link">Work</a>
+                    </li>
+                    <li class="nav_item">
+                        <a href="/experience.html" class="nav-link"
+                            >Experience</a
+                        >
+                    </li>
+                    <li class="nav_item">
+                        <a href="/me.html" class="nav-link">About Me</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="new_main">
+            <main class="all_me container">
+                <!-- put this in a div and add padding around it to keep it lined up with the nav bar. also add width 100%-->
+                <div class="profile_pic_container">
+                    <!-- change grid to 1fr when scaling down for media query so it takes the whole block-->
+                    <img
+                        class="profile_picture"
+                        src="/static/images/profile_pic.png"
+                        alt="profile picture"
+                    />
+                </div>
+
+                <div class="profile_group_container">
+                    <div class="profile_text_container">
+                        <div class="title_container"><h3>Hello!</h3></div>
+                        <div>
+                            <p>
+                                I'm an Animator and a Fullstack Designer in
+                                Philadelphia, PA with roots in St. Louis, MO.
+                                I'm passionate about working on designs and
+                                animations that improve lives and have a
+                                positive social impact. I design in a
+                                human-centric way, incorporating user research
+                                and practical choices for user interfaces. I
+                                draw design inspiration from my favorite brands
+                                and trends, using my Master's in Fine Arts, to
+                                add a creative touch to everything I do.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="profile_text_container">
+                        <div class="title_container">
+                            <h3>Animation Work</h3>
+                        </div>
+                        <div>
+                            <p>
+                                Early on in life, I knew I wanted to be an
+                                artist and bring my drawings to life in a
+                                digital format. I started my career in animation
+                                after completing my studies at the Chicago
+                                Illinois Institute of the Arts. I traveled from
+                                Chicago to San Francisco in pursuit of animation
+                                and received my MFA from the Academy of Art.
+                                Afterward, I moved between LA and the Bay Area
+                                working on various projects before moving to New
+                                York where I've worked as a character animator
+                                and motion graphics designer for the last 6
+                                years.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="profile_text_container">
+                        <div class="title_container"><h3>Design Work</h3></div>
+                        <div>
+                            <p>
+                                After working in the Animation field for 8
+                                years, I decided to pursue a career as a
+                                Fullstack Designer to grow my artistic skillset
+                                further. I attended the CareerFoundry to gain
+                                certification in UI Design and have been
+                                currently working on projects to diversify my
+                                portfolio. After completing certification I
+                                attended Coding Dojo to gain certification in
+                                Fullstack Development.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="profile_text_container">
+                        <div class="title_container"><h3>Hobbies</h3></div>
+                        <div>
+                            <p>
+                                In my downtime, I enjoy gaming, swimming,
+                                painting, drawing, and researching the newest
+                                techniques in digital art. On any given weekend
+                                I can be found walking around my newest city,
+                                visiting museums, and finding inspiration in the
+                                world around me.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <!--form container-->
+        <footer>
+            <hr />
+            <h3 class="footer_text">Contact Me</h3>
+
+            <!--CONVERT ICON PNGS TO SVG -->
+
+            <div class="icon_group">
+                <a href="mailto:brownjarvis21@gmail.com"
+                    ><img
+                        src="/static/images/email_icon.png"
+                        class="icon_link"
+                        alt="email icon"
+                /></a>
+                <a href="https://www.linkedin.com/in/jarvis-brown/"
+                    ><img
+                        src="/static/images/linkedin_icon.png"
+                        class="icon_link"
+                        alt="linkedin icon"
+                /></a>
+                <a href="https://github.com/Jarvis-Brown"
+                    ><img
+                        src="/static/images/github_icon.png"
+                        class="icon_link"
+                        alt="github icon"
+                /></a>
+                <a href="https://www.behance.net/brownjarvi025f"
+                    ><img
+                        src="/static/images/behance_icon.png"
+                        class="icon_link"
+                        alt="behance icon"
+                /></a>
+            </div>
+        </footer>
+
+        <script src="/script.js">
+            console.log("script is working here");
+        </script>
+    </body>
+</html>
