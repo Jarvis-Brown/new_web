@@ -45,10 +45,12 @@ hr {
     justify-content: center;
     max-width: 100%;
     margin-top: 20px;
+    gap: 20px;
 }
 
 footer {
     max-width: 100%;
+    padding-bottom: 20px;
 }
 
 .footer_text {
@@ -57,7 +59,6 @@ footer {
 
 .icon_link {
     height: 2rem;
-    padding: 0 40px;
 }
 
 @media (max-width: 768px) {

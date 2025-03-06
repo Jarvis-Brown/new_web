@@ -11,8 +11,8 @@ body {
     font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
     background-color: #f5f5f5;
     color: #333;
-    width: 100%;
-    /* overflow: hidden; */
+    width: 100vw;
+    overflow-x: hidden;
 }
 
 /* Can add this to keep navbar the same on all pages
