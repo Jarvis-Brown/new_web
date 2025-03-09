@@ -142,6 +142,10 @@ ul {
 /* Responsive Design */
 
 @media (max-width: 768px) {
+    header {
+        width: 700px;
+    }
+
     h1 {
         font-size: 2rem;
     }
@@ -161,5 +165,48 @@ ul {
     .resume-btn {
         padding: 8px 12px;
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 426px) {
+    header {
+        width: 380px;
+    }
+
+    .skills_container {
+        grid-template-columns: 33% 33% 33%;
+    }
+
+    .design_skills {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .job_container {
+        grid-template-columns: 1fr;
+    }
+
+    .job_title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 376px) {
+    header {
+        width: 330px;
+    }
+}
+
+@media (max-width: 321px) {
+    header {
+        width: 280px;
+    }
+
+    .skills_container {
+        grid-template-columns: 1fr;
+    }
+
+    .skills_info {
+        padding-bottom: 20px;
     }
 }
