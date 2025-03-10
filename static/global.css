@@ -6,6 +6,10 @@
     border: 0;
 }
 
+html {
+    font-size: 1rem;
+}
+
 body {
     font-size: 1rem;
     font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
@@ -155,5 +159,31 @@ nav.no-border {
 
     .nav-content {
         width: 90%;
+    }
+}
+
+@media (min-width: 2560px) {
+    html {
+        font-size: 20px; /* Scale everything using rem */
+    }
+
+    h1 {
+        font-size: 4rem; /* Make headings larger */
+    }
+
+    p {
+        font-size: 1.5rem; /* Increase readability */
+    }
+}
+
+@media (min-width: 1920px) {
+    body {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        font-size: 1.25rem;
     }
 }

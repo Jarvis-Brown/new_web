@@ -1,3 +1,8 @@
+:root {
+    --accent-color: #47cc1f;
+    --background-color: #f5f5f5;
+}
+
 .new_main {
     width: 100%;
 }
@@ -59,6 +64,33 @@ footer {
 
 .icon_link {
     height: 2rem;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.icon_link:hover {
+    transform: scale(1.1);
+    filter: brightness(0) saturate(100%) invert(51%) sepia(94%) saturate(336%)
+        hue-rotate(65deg) brightness(100%) contrast(92%);
+}
+
+@media (min-width: 2560px) {
+    /* html {
+        font-size: 1rem;
+    } */
+}
+
+@media (min-width: 1440px) {
+    /* html {
+        font-size: 1rem;
+    } */
+
+    .icon_link {
+        height: 3rem;
+    }
+
+    .icon_group {
+        gap: 30px;
+    }
 }
 
 @media (max-width: 1023px) {
