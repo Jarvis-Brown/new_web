@@ -1,0 +1,191 @@
+/* group rules*/
+
+:root {
+    --header-color: #5e86da;
+    --bullet-color: #f6af50;
+}
+
+h3 {
+    color: var(--header-color);
+    text-align: left;
+}
+
+html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: calc(60px + 2rem); /* originally 60px */
+    min-height: 100vh;
+    margin: 0 3.8rem;
+}
+
+/* gif phone */
+
+.phone_container {
+    position: relative;
+    display: inline-block;
+}
+
+.fit_you_gif {
+    height: 700px;
+}
+
+.shadow {
+    position: absolute;
+    bottom: 100px; /* Adjust distance below the GIF */
+    left: 50%;
+    width: 80%;
+    height: 20px;
+    background: radial-gradient(
+        circle,
+        rgba(0, 0, 0, 0.3) 20%,
+        rgba(0, 0, 0, 0) 80%
+    );
+    transform: translateX(-50%);
+    border-radius: 50%;
+    filter: blur(8px); /* Softens the shadow */
+    z-index: -1; /* Ensures it stays behind */
+}
+
+/* Overview */
+
+.text_pic_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.android_phone_img {
+    height: 500px;
+}
+
+.title_container {
+    padding-bottom: 10px;
+}
+
+.pic_container {
+    display: flex;
+    justify-content: center;
+}
+
+/* all info sections */
+
+.info_section {
+    padding-bottom: 40px;
+
+    width: 100%;
+}
+
+/* Competition section */
+
+.list_pic_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.list ul {
+    list-style: none; /* Removes default bullets */
+    padding-left: 20px; /* Ensures proper spacing */
+}
+
+.list ul li {
+    position: relative;
+    padding-left: 20px; /* Space for custom bullet */
+}
+
+.list ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px; /* Adjust alignment */
+    width: 8px; /* Size of bullet */
+    height: 8px; /* Size of bullet */
+    border: 2px solid var(--bullet-color); /* Thickness and color */
+    border-radius: 50%; /* Makes it a circle */
+}
+
+.screen_img {
+    height: 450px;
+}
+
+/* Personas */
+
+.p_text {
+    margin-bottom: 20px;
+}
+
+.group_persona {
+    width: 60%;
+}
+
+.persona_group_1 {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.persona_group_2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.persona_group_3 {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.persona_info_wrapper {
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.persona_img {
+}
+
+.persona_info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 20px 20px;
+}
+
+.persona_info_reverse {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 20px 60px;
+}
+
+.persona_img {
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+.persona_name {
+    text-decoration: 5px underline var(--bullet-color);
+}
+
+.horizontal_list {
+    display: flex;
+    /*flex-wrap: wrap;*/
+    gap: 60px;
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.list_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
