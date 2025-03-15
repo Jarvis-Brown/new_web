@@ -23,7 +23,7 @@ html {
     align-items: center;
     padding-top: calc(60px + 2rem); /* originally 60px */
     min-height: 100vh;
-    margin: 0 3.8rem;
+    margin: 0 8rem;
 }
 
 /* gif phone */
@@ -79,11 +79,18 @@ html {
 
 .info_section {
     padding-bottom: 40px;
+    width: 100%;
+}
 
+.text_container {
     width: 100%;
 }
 
 /* Competition section */
+
+.sub_header {
+    padding-bottom: 20px;
+}
 
 .list_pic_container {
     display: grid;
@@ -98,6 +105,7 @@ html {
 .list ul li {
     position: relative;
     padding-left: 20px; /* Space for custom bullet */
+    padding-bottom: 30px;
 }
 
 .list ul li::before {
@@ -206,4 +214,27 @@ html {
 .group_persona {
     width: 30%;
     min-width: 300px;
+}
+
+/* User Needs / Solutions */
+
+.user_need_img {
+    height: 550px;
+    border-radius: 10px;
+}
+
+/* User Stories*/
+
+.diagram_img {
+    height: 680px;
+}
+
+/*Low Fidelity Wireframes*/
+
+.phone_fidelity_container {
+    gap: 20px;
+}
+
+.android_screen_img {
+    height: 400px;
 }
