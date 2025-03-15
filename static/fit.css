@@ -127,7 +127,7 @@ html {
 
 .persona_group_1 {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
 }
 
@@ -139,7 +139,7 @@ html {
 
 .persona_group_3 {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     width: 100%;
 }
 
@@ -148,44 +148,62 @@ html {
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     margin: 20px 0;
+    width: 100%;
 }
 
-.persona_img {
+.persona {
+    display: flex;
+    justify-content: center;
 }
 
 .persona_info {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr;
     padding: 20px 20px;
-}
-
-.persona_info_reverse {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding: 20px 60px;
+    align-items: center;
 }
 
 .persona_img {
-    width: 250px;
+    width: 200px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 50%;
+    margin-bottom: 20px;
 }
 
 .persona_name {
     text-decoration: 5px underline var(--bullet-color);
+    text-align: center;
 }
 
 .horizontal_list {
     display: flex;
     /*flex-wrap: wrap;*/
-    gap: 60px;
+    gap: 20px;
     max-width: 100%;
-    padding: 50px 0;
+    padding: 20px 0;
+    flex-direction: column;
 }
 
 .list_text {
     display: flex;
-    flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 10px;
+}
+
+.goals {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.persona_all {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.group_persona {
+    width: 30%;
+    min-width: 300px;
 }
