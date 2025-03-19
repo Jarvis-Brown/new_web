@@ -8,6 +8,11 @@
 h3 {
     color: var(--header-color);
     text-align: left;
+    font-size: 40px;
+}
+
+h4 {
+    font-size: 25px;
 }
 
 html {
@@ -89,7 +94,7 @@ html {
 /* Competition section */
 
 .sub_header {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .list_pic_container {
@@ -239,6 +244,14 @@ html {
     height: 400px;
 }
 
+.phone_title {
+    background-color: var(--bullet-color);
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+    width: 150px;
+}
+
 /*Native App Designs*/
 
 .app_design_text {
@@ -307,4 +320,22 @@ html {
 
 .fit_icons {
     height: 60px;
+}
+
+/* Final Study */
+
+.fit_ios_final {
+    height: 500px;
+}
+
+.final_phone {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+
+.paragraph_info {
+    padding-bottom: 20px;
 }
