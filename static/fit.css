@@ -20,6 +20,13 @@ html {
     margin: 0;
     padding: 0;
     width: 100%;
+    max-width: 100%;
+}
+
+.new_main {
+    width: 100%;
+    max-width: 100%;
+    /*overflow-x: hidden;*/
 }
 
 .main {
@@ -29,6 +36,7 @@ html {
     padding-top: calc(60px + 2rem); /* originally 60px */
     min-height: 100vh;
     margin: 0 8rem;
+    /*overflow-x: hidden;*/
 }
 
 /* gif phone */
@@ -40,6 +48,7 @@ html {
 
 .fit_you_gif {
     height: 700px;
+    max-height: 100%;
 }
 
 .shadow {
@@ -65,10 +74,12 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
+    max-width: 100%;
 }
 
 .android_phone_img {
     height: 500px;
+    max-height: 100%;
 }
 
 .title_container {
@@ -85,10 +96,14 @@ html {
 .info_section {
     padding-bottom: 40px;
     width: 100%;
+    max-width: 100%;
+    /*overflow-x: hidden; */
 }
 
 .text_container {
     width: 100%;
+    max-width: 100%;
+    /*overflow-x: hidden;*/
 }
 
 /* Competition section */
@@ -97,19 +112,23 @@ html {
     padding-bottom: 10px;
 }
 
+.list_info {
+    padding-bottom: 20px;
+}
+
 .list_pic_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
 .list ul {
-    list-style: none; /* Removes default bullets */
-    padding-left: 20px; /* Ensures proper spacing */
+    list-style: none;
+    padding-left: 20px;
 }
 
 .list ul li {
     position: relative;
-    padding-left: 20px; /* Space for custom bullet */
+    padding-left: 20px;
     padding-bottom: 30px;
 }
 
@@ -117,11 +136,11 @@ html {
     content: "";
     position: absolute;
     left: 0;
-    top: 8px; /* Adjust alignment */
-    width: 8px; /* Size of bullet */
-    height: 8px; /* Size of bullet */
-    border: 2px solid var(--bullet-color); /* Thickness and color */
-    border-radius: 50%; /* Makes it a circle */
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--bullet-color);
+    border-radius: 50%;
 }
 
 .screen_img {
@@ -148,12 +167,14 @@ html {
     display: flex;
     justify-content: center;
     width: 100%;
+    max-width: 100%;
 }
 
 .persona_group_3 {
     display: flex;
     justify-content: center;
     width: 100%;
+    max-width: 100%;
 }
 
 .persona_info_wrapper {
@@ -162,6 +183,7 @@ html {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     margin: 20px 0;
     width: 100%;
+    max-width: 100%;
 }
 
 .persona {
@@ -212,21 +234,22 @@ html {
 
 .persona_all {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .group_persona {
     width: 30%;
     min-width: 300px;
+    padding: 0 20px;
 }
 
 /* User Needs / Solutions */
 
 .user_need_img {
     border-radius: 10px;
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 90%;
+    max-width: 90%;
 }
 
 /* User Stories*/
@@ -246,11 +269,8 @@ html {
 }
 
 .phone_title {
-    background-color: var(--bullet-color);
-    border-radius: 5px;
     text-align: center;
-    color: white;
-    width: 150px;
+    padding-bottom: 10px;
 }
 
 /*Native App Designs*/
@@ -335,22 +355,180 @@ html {
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 20px;
+    margin: 0 10px;
 }
 
 .paragraph_info {
     padding-bottom: 20px;
 }
 
-@media (max-width: 1024px) {
+/* Media Queries */
+
+@media (max-width: 1024px) and (min-width: 769px) {
     .user_need_img {
-        height: 80%;
+        height: 60%;
+    }
+
+    .diagram_img {
+        height: 600px;
+    }
+
+    .fit_icons {
+        padding: ;
+    }
+
+    .list ul {
+        padding-left: 0px;
+        padding-right: 20px;
     }
 }
 
-@media (max-width: 768px) {
-    .android_screen_img .screen_img {
+@media (max-width: 768px) and (min-width: ) {
+    .list ul {
+        padding-left: 0px;
+        padding-right: 20px;
+    }
+
+    #stretch_img {
+        overflow: hidden;
     }
 
     .screen_img {
+        height: 350px;
+    }
+
+    .android_screen_img {
+        height: 300px;
+    }
+
+    .persona_all {
+        justify-content: center;
+    }
+
+    .color_row {
+        gap: 50px;
+    }
+
+    .fit_icons {
+        height: 40px;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 767px) {
+    .text_pic_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .list_pic_container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .pic_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .diagram_img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .typography_color_container {
+        flex-direction: column;
+    }
+
+    .native_icon_container {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .color_row {
+        gap: 70px;
+    }
+
+    .fit_icons {
+        height: 50px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 425px) {
+    .main {
+        margin: 0 2rem;
+    }
+
+    .fit_you_gif {
+        height: 350px;
+    }
+
+    h3 {
+        font-size: 28px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    .text_pic_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .android_phone_img {
+        height: 300px;
+    }
+
+    .list_pic_container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .diagram_img {
+        height: 400px;
+    }
+
+    .list ul {
+        padding-right: 0px;
+    }
+
+    .pic_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .typography_color_container {
+        flex-direction: column;
+    }
+
+    .color_container {
+        padding-top: 20px;
+    }
+
+    .native_icon_container {
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .fit_icons {
+        padding: 0 10px 10px 10px;
+    }
+
+    .fit_ios_final {
+        height: 350px;
+    }
+}
+
+@media (max-width: 375px) {
+    .color_row {
+        gap: 30px;
     }
 }

@@ -70,6 +70,26 @@ document.querySelectorAll(".nav-link").forEach((n) =>
     })
 );
 
-console.log("script.js is working");
+// Scroll Button
 
-console.log("script is working");
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+window.addEventListener("scroll", () => {
+    if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add("show");
+    } else {
+        scrollToTopBtn.classList.remove("show");
+    }
+});
+
+scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+});
+
+/* searching for oversized elements */
+[...document.querySelectorAll("*")].reduce((a, e) => {
+    return e.scrollWidth > a.scrollWidth ? e : a;
+});
