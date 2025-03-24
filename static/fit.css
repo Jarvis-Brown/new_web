@@ -224,8 +224,9 @@ html {
 /* User Needs / Solutions */
 
 .user_need_img {
-    height: 550px;
     border-radius: 10px;
+    max-height: 100%;
+    max-width: 100%;
 }
 
 /* User Stories*/
@@ -338,4 +339,18 @@ html {
 
 .paragraph_info {
     padding-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .user_need_img {
+        height: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .android_screen_img .screen_img {
+    }
+
+    .screen_img {
+    }
 }
