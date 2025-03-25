@@ -3,6 +3,8 @@
 :root {
     --header-color: #5e86da;
     --bullet-color: #f6af50;
+    --travel-main: #997fce;
+    --travel-accent: #00cecb;
 }
 
 h3 {
@@ -343,6 +345,39 @@ html {
     height: 60px;
 }
 
+/* -- travel XP colors -- */
+.travel_color_1 {
+    background-color: #35385a;
+}
+
+.travel_color_2 {
+    background-color: var(--travel-main);
+}
+
+.travel_color_3 {
+    background-color: var(--travel-accent);
+}
+
+.travel_color_4 {
+    background-color: #ff508a;
+}
+
+.travel_color_5 {
+    background-color: #fcfc8e;
+}
+
+.travel_color_6 {
+    background-color: #d9ccff;
+}
+
+.travel_color_7 {
+    background-color: #c7c4cf;
+}
+
+.travel_color_8 {
+    background-color: #ffffff;
+}
+
 /* Final Study */
 
 .fit_ios_final {
@@ -383,7 +418,7 @@ html {
     }
 }
 
-@media (max-width: 768px) and (min-width: ) {
+@media (max-width: 768px) {
     .list ul {
         padding-left: 0px;
         padding-right: 20px;
