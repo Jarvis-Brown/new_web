@@ -5,6 +5,7 @@
     --bullet-color: #f6af50;
     --travel-main: #997fce;
     --travel-accent: #00cecb;
+    --travel-accent-2: #ff508a;
 }
 
 h3 {
@@ -13,8 +14,16 @@ h3 {
     font-size: 40px;
 }
 
+.travel_h3 {
+    color: var(--travel-accent-2);
+}
+
 h4 {
     font-size: 25px;
+}
+
+.travel_xp_page h4 {
+    color: var(--travel-main);
 }
 
 html {
@@ -149,6 +158,12 @@ html {
     height: 450px;
 }
 
+/* -- Travel XP Competition -- */
+
+.travel_xp_page .list ul li::before {
+    border: 2px solid var(--travel-accent);
+}
+
 /* Personas */
 
 .p_text {
@@ -260,6 +275,14 @@ html {
     height: 680px;
 }
 
+/* -- Travel XP User Stories -- */
+
+.box-bg {
+    background-color: #35385a;
+    border-radius: 10px;
+    padding: 10px;
+}
+
 /*Low Fidelity Wireframes*/
 
 .phone_fidelity_container {
@@ -273,6 +296,10 @@ html {
 .phone_title {
     text-align: center;
     padding-bottom: 10px;
+}
+
+.lo_mid_fi_screens {
+    row-gap: 20px;
 }
 
 /*Native App Designs*/
@@ -397,6 +424,12 @@ html {
     padding-bottom: 20px;
 }
 
+/* Takeaways */
+
+.takeaway_img {
+    max-width: 90%;
+}
+
 /* Media Queries */
 
 @media (max-width: 1024px) and (min-width: 769px) {
@@ -408,13 +441,22 @@ html {
         height: 600px;
     }
 
-    .fit_icons {
-        padding: ;
-    }
-
     .list ul {
         padding-left: 0px;
         padding-right: 20px;
+    }
+
+    /* -- Travel XP Personas -- */
+
+    .travel_persona {
+        width: 400px;
+        height: 250px;
+    }
+
+    /* -- Travel XP Style Guide -- */
+
+    .travel_icons {
+        width: 600px;
     }
 }
 
@@ -446,6 +488,24 @@ html {
 
     .fit_icons {
         height: 40px;
+    }
+
+    /* -- Travel XP Personas -- */
+
+    .travel_persona {
+        height: 170px;
+    }
+
+    /* -- Travel XP User Stories -- */
+
+    .diagram_img {
+        height: 400px;
+    }
+
+    /* -- Travel XP Style Guide -- */
+
+    .travel_icons {
+        width: 600px;
     }
 }
 
