@@ -302,6 +302,10 @@ html {
     row-gap: 20px;
 }
 
+.low_fi_img {
+    height: 350px;
+}
+
 /*Native App Designs*/
 
 .app_design_text {
@@ -505,7 +509,7 @@ html {
     /* -- Travel XP Style Guide -- */
 
     .travel_icons {
-        width: 600px;
+        width: 450px;
     }
 }
 
