@@ -376,7 +376,14 @@ html {
     height: 60px;
 }
 
-/* -- travel XP colors -- */
+/* -- Travel XP Typography -- */
+
+.travel_xp_page .app_design_text {
+    font-family: Arial;
+}
+
+/* -- Travel XP colors -- */
+
 .travel_color_1 {
     background-color: #35385a;
 }
@@ -475,7 +482,7 @@ html {
     }
 
     .screen_img {
-        height: 350px;
+        height: 320px;
     }
 
     .android_screen_img {
@@ -508,8 +515,23 @@ html {
 
     /* -- Travel XP Style Guide -- */
 
+    .travel_xp_page .color_row {
+        gap: 20px;
+    }
+
     .travel_icons {
         width: 450px;
+    }
+
+    .travel_xp_page .list_info .fit_ios_final {
+        height: 350px;
+    }
+
+    /* -- Travel XP User Feedbacl -- */
+
+    .travel_list_pic_container {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -624,10 +646,71 @@ html {
     .fit_ios_final {
         height: 350px;
     }
+
+    /* -- Travel XP Style Guide -- */
+
+    .travel_xp_page .color_group {
+        flex-wrap: wrap;
+    }
+
+    .travel_xp_page .color_row {
+        justify-content: center;
+    }
+
+    .travel_xp_page .native_icon_container {
+        justify-content: center;
+    }
+
+    .travel_icons {
+        width: 350px;
+    }
 }
 
 @media (max-width: 375px) {
     .color_row {
         gap: 30px;
+    }
+
+    /* -- Travel XP Overview -- */
+
+    .travel_xp_page .phone_img {
+        height: 400px;
+    }
+
+    /* -- Travel XP Persona -- */
+
+    .travel_persona {
+        height: 150px;
+    }
+
+    /* -- Travel XP User Stories -- */
+
+    .travel_xp_page .diagram_img {
+        height: 300px;
+    }
+
+    /* -- Travel XP Low Fidelity -- */
+
+    .travel_xp_page .low_fi_img {
+        height: 300px;
+    }
+
+    /* -- Travel XP Style Guide -- */
+
+    .travel_xp_page .color_container {
+        padding-bottom: 20px;
+    }
+
+    .travel_xp_page .color_group_all {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .travel_xp_page .color_row {
+        display: contents;
+    }
+
+    .travel_icons {
+        width: 250px;
     }
 }
