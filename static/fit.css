@@ -6,6 +6,10 @@
     --travel-main: #997fce;
     --travel-accent: #00cecb;
     --travel-accent-2: #ff508a;
+    --games-main: #366a7d;
+    --games-accent: #42e858;
+    --games-accent-2: #f27171;
+    --games-text: #dde0ea;
 }
 
 h3 {
@@ -18,12 +22,28 @@ h3 {
     color: var(--travel-accent-2);
 }
 
+.games_page h3 {
+    color: var(--games-main);
+}
+
 h4 {
     font-size: 25px;
 }
 
 .travel_xp_page h4 {
     color: var(--travel-main);
+}
+
+.games_page h4 {
+    color: var(--games-main);
+}
+
+.games_page p {
+    color: var(--games-main);
+}
+
+.games_page li {
+    color: var(--games-main);
 }
 
 html {
@@ -162,6 +182,30 @@ html {
 
 .travel_xp_page .list ul li::before {
     border: 2px solid var(--travel-accent);
+}
+
+/* -- Games N Things Competition -- */
+
+.games_page .list ul {
+    list-style-type: none; /* override default */
+    padding-left: 20px;
+}
+
+.games_page .list ul li {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 30px;
+}
+
+.games_page .list ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 8px;
+    height: 8px;
+    border: 2px solid var(--games-accent);
+    border-radius: 2px;
 }
 
 /* Personas */
@@ -306,6 +350,21 @@ html {
     height: 350px;
 }
 
+/* -- Games N Things Low Fidelity Wireframes --*/
+
+/*
+.games_page .low_fi_img {
+    height: 450px;
+}
+
+.games_page .lo_mid_fi_screens {
+    gap: 10px;
+    margin: 0;
+    padding-bottom: 0;
+}
+
+*/
+
 /*Native App Designs*/
 
 .app_design_text {
@@ -413,6 +472,33 @@ html {
 }
 
 .travel_color_8 {
+    background-color: #ffffff;
+}
+
+/* -- Games N Things colors -- */
+
+.games_page .color_circle {
+    border-radius: 10px;
+    border: 2px solid var(--games-main);
+}
+
+.games_color_1 {
+    background-color: #366a7d;
+}
+
+.games_color_2 {
+    background-color: #f27171;
+}
+
+.games_color_3 {
+    background-color: #42e858;
+}
+
+.games_color_4 {
+    background-color: #dde0ea;
+}
+
+.games_color_5 {
     background-color: #ffffff;
 }
 
