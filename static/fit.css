@@ -319,6 +319,10 @@ html {
     height: 680px;
 }
 
+/* -- Games N Things User Stories -- */
+.games_page .diagram_img {
+    height: 600px;
+}
 /* -- Travel XP User Stories -- */
 
 .box-bg {
