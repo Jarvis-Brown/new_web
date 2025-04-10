@@ -355,7 +355,7 @@ html {
 }
 
 .low_fi_img {
-    height: 350px;
+    height: 300px;
 }
 
 /* -- Games N Things Low Fidelity Wireframes --*/
@@ -520,9 +520,10 @@ html {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     padding-bottom: 20px;
     margin: 0 10px;
+    gap: 20px;
 }
 
 .paragraph_info {

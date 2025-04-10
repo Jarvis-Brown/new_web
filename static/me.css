@@ -34,8 +34,7 @@ main {
 
 .profile_picture {
     border-radius: 5%;
-    height: 250px;
-    width: 250px;
+    height: 350px;
 }
 
 hr {
@@ -90,6 +89,12 @@ footer {
 
     .icon_group {
         gap: 30px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .profile_picture {
+        height: 250px;
     }
 }
 
