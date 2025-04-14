@@ -10,6 +10,12 @@
     --games-accent: #42e858;
     --games-accent-2: #f27171;
     --games-text: #dde0ea;
+    --tunes-text: #3f3c3c;
+    --tunes-blue: #31437e;
+    --tunes-turquoise: #038c9f;
+    --tunes-orange: #ff5c17;
+    --tunes-gray: #cbcbcd;
+    --white: #ffffff;
 }
 
 h3 {
@@ -333,6 +339,47 @@ html {
     background-color: #35385a;
     border-radius: 10px;
     padding: 10px;
+}
+
+/* -- Your Tunes Mood -- */
+
+.mood_img {
+    height: 250px;
+    border-radius: 20px;
+}
+
+.mood_design_img {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding-top: 30px;
+}
+
+.mood_container {
+    display: flex;
+    gap: 10%;
+}
+
+.mood_color_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.mood_description {
+    text-align: center;
+}
+
+.mood_color {
+    height: 150px;
+}
+
+.mood_color_column {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding-bottom: 20px;
 }
 
 /*Low Fidelity Wireframes*/
