@@ -739,6 +739,12 @@ html {
         padding-bottom: 20px;
         justify-content: center;
     }
+
+    /* -- Your Tunes Designs -- */
+
+    .tunes_page .fit_icons {
+        height: 30px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -783,6 +789,19 @@ html {
 
     /* -- Your Tunes Mood -- */
 
+    .mood_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mood_img {
+        height: 170px;
+    }
+
+    .mood_color {
+        height: 100px;
+    }
+
     /* -- Travel XP Personas -- */
 
     .travel_persona {
@@ -813,6 +832,16 @@ html {
 
     .travel_xp_page .list_info .fit_ios_final {
         height: 350px;
+    }
+
+    /* -- Your Tunes Designs -- */
+
+    .tunes_page .native_icon_container {
+        display: flex;
+        max-width: 100%;
+        flex-wrap: wrap;
+        row-gap: 10px;
+        gap: 10px;
     }
 
     /* -- Travel XP User Feedback -- */
@@ -947,6 +976,20 @@ html {
         padding-left: 0px;
     }
 
+    /* -- Your Tunes mood -- */
+
+    .mood_img {
+        height: 120px;
+    }
+
+    .mood_color_column {
+        gap: 40px;
+    }
+
+    .mood_color {
+        height: 80px;
+    }
+
     /* -- Travel XP Style Guide -- */
 
     .travel_xp_page .color_group {
@@ -963,6 +1006,12 @@ html {
 
     .travel_icons {
         width: 350px;
+    }
+
+    /* -- Your Tunes Designs -- */
+
+    .tunes_page .color_row {
+        justify-content: center;
     }
 }
 
@@ -981,6 +1030,20 @@ html {
 
     #games_overview_pic_container {
         padding-left: 0px;
+    }
+
+    /* -- Your Tunes Mood -- */
+
+    .mood_img {
+        height: 80px;
+    }
+
+    .mood_color_column {
+        gap: 20px;
+    }
+
+    .mood_color {
+        height: 60px;
     }
 
     /* -- Travel XP Persona -- */
