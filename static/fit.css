@@ -32,6 +32,14 @@ h3 {
     color: var(--games-main);
 }
 
+.tunes_page h3 {
+    color: var(--tunes-orange);
+}
+
+.tunes_page h4 {
+    color: var(--tunes-turquoise);
+}
+
 h4 {
     font-size: 25px;
 }
@@ -214,6 +222,12 @@ html {
     border-radius: 2px;
 }
 
+/* -- Your Tunes Competition -- */
+
+.tunes_page .list ul li::before {
+    border: 2px solid var(--tunes-gray);
+}
+
 /* Personas */
 
 .p_text {
@@ -344,8 +358,9 @@ html {
 /* -- Your Tunes Mood -- */
 
 .mood_img {
-    height: 250px;
+    height: 200px;
     border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .mood_design_img {
@@ -357,18 +372,25 @@ html {
 
 .mood_container {
     display: flex;
-    gap: 10%;
+    gap: 5%;
 }
 
 .mood_color_container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding-top: 30px;
 }
 
 .mood_description {
     text-align: center;
+    max-width: 100%;
+}
+
+.mood_text {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    row-gap: 30px;
 }
 
 .mood_color {
@@ -378,8 +400,9 @@ html {
 .mood_color_column {
     display: flex;
     flex-direction: row;
-    gap: 100px;
+    gap: 80px;
     padding-bottom: 20px;
+    justify-content: center;
 }
 
 /*Low Fidelity Wireframes*/
@@ -419,6 +442,12 @@ html {
 }
 
 */
+
+/*Your Tunes Low Fidelity Wireframes*/
+
+.tunes_page .lo_mid_fi_screens {
+    padding-top: 30px;
+}
 
 /*Native App Designs*/
 
@@ -557,6 +586,40 @@ html {
     background-color: #ffffff;
 }
 
+/* -- Your Tunes colors -- */
+
+.tunes_color_1 {
+    background-color: var(--tunes-text);
+}
+
+.tunes_color_2 {
+    background-color: var(--tunes-blue);
+}
+
+.tunes_color_3 {
+    background-color: var(--tunes-turquoise);
+}
+
+.tunes_color_4 {
+    background-color: var(--tunes-orange);
+}
+
+.tunes_color_5 {
+    background-color: var(--tunes-gray);
+}
+
+.tunes_color_6 {
+    background-color: var(--white);
+}
+
+/* -- Your Tunes icons -- */
+
+.tunes_page .native_icon_container {
+    background-color: var(--tunes-gray);
+    padding: 20px;
+    border-radius: 20px;
+}
+
 /* Final Study */
 
 .fit_ios_final {
@@ -577,6 +640,17 @@ html {
     padding-bottom: 20px;
 }
 
+/* -- Your Tunes High Fidelity -- */
+
+.tunes_page .final_phone {
+    gap: 30px;
+    padding-top: 20px;
+}
+
+.tunes_page .fit_ios_final {
+    height: 400px;
+}
+
 /* Takeaways */
 
 .takeaway_img {
@@ -589,10 +663,20 @@ html {
     border-radius: 10px;
 }
 
+/* -- Your Tunes Takeaways -- */
+
+.tunes_page .takeaway_img {
+    max-width: 80%;
+}
+
 /* Media Queries */
 
 @media (max-width: 1024px) and (min-width: 769px) {
-    .user_need_img {
+    /*.user_need_img {
+        height: 60%;
+    } */
+
+    #stretch_img {
         height: 60%;
     }
 
@@ -603,6 +687,16 @@ html {
     .list ul {
         padding-left: 0px;
         padding-right: 20px;
+    }
+
+    /* -- Games N Things Overview --*/
+
+    #games_overview_pic_container {
+        padding-left: 20px;
+    }
+
+    .fit_overview_img {
+        height: 300px;
     }
 
     /* -- Travel XP Personas -- */
@@ -616,6 +710,34 @@ html {
 
     .travel_icons {
         width: 600px;
+    }
+
+    /*-- Your Tunes Mood -- */
+
+    .mood_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mood_color_container {
+        padding-top: 50px;
+    }
+
+    .mood_description {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .mood_color {
+        height: 150px;
+    }
+
+    .mood_color_column {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        padding-bottom: 20px;
+        justify-content: center;
     }
 }
 
@@ -649,6 +771,18 @@ html {
         height: 40px;
     }
 
+    /* -- Games N Things Overview --*/
+
+    #games_overview_pic_container {
+        padding-left: 20px;
+    }
+
+    .fit_overview_img {
+        height: 300px;
+    }
+
+    /* -- Your Tunes Mood -- */
+
     /* -- Travel XP Personas -- */
 
     .travel_persona {
@@ -681,7 +815,7 @@ html {
         height: 350px;
     }
 
-    /* -- Travel XP User Feedbacl -- */
+    /* -- Travel XP User Feedback -- */
 
     .travel_list_pic_container {
         display: grid;
@@ -731,6 +865,12 @@ html {
     .fit_icons {
         height: 50px;
         padding: 5px;
+    }
+
+    /* -- Games N Things Overview --*/
+
+    #games_overview_pic_container {
+        padding-left: 0px;
     }
 }
 
@@ -801,6 +941,12 @@ html {
         height: 350px;
     }
 
+    /* -- Games N Things Overview --*/
+
+    #games_overview_pic_container {
+        padding-left: 0px;
+    }
+
     /* -- Travel XP Style Guide -- */
 
     .travel_xp_page .color_group {
@@ -829,6 +975,12 @@ html {
 
     .travel_xp_page .phone_img {
         height: 400px;
+    }
+
+    /* -- Games N Things Overview --*/
+
+    #games_overview_pic_container {
+        padding-left: 0px;
     }
 
     /* -- Travel XP Persona -- */
