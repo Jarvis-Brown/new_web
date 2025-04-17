@@ -802,6 +802,12 @@ html {
         height: 100px;
     }
 
+    /* -- Travel XP Solution -- */
+
+    #travel_solution_img {
+        height: 375px;
+    }
+
     /* -- Travel XP Personas -- */
 
     .travel_persona {
@@ -903,7 +909,7 @@ html {
     }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 426px) {
     .main {
         margin: 0 2rem;
     }
@@ -988,6 +994,12 @@ html {
 
     .mood_color {
         height: 80px;
+    }
+
+    /* -- Travel XP Solution -- */
+
+    #travel_solution_img {
+        padding-top: 20px;
     }
 
     /* -- Travel XP Style Guide -- */
