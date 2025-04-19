@@ -857,8 +857,8 @@ html {
         grid-template-columns: 1fr;
     }
 }
-
-@media (min-width: 426px) and (max-width: 767px) {
+/*
+@media (min-width: 427px) and (max-width: 767px) {
     .text_pic_container {
         display: grid;
         grid-template-columns: 1fr;
@@ -903,13 +903,15 @@ html {
     }
 
     /* -- Games N Things Overview --*/
-
+/*
     #games_overview_pic_container {
         padding-left: 0px;
     }
 }
 
-@media (max-width: 426px) {
+*/
+
+@media (max-width: 767px) and (min-width: 320px) {
     .main {
         margin: 0 2rem;
     }
@@ -982,6 +984,12 @@ html {
         padding-left: 0px;
     }
 
+    /* -- Games N Things User Stories -- */
+
+    .games_page .diagram_img {
+        height: 300px;
+    }
+
     /* -- Your Tunes mood -- */
 
     .mood_img {
@@ -1028,6 +1036,10 @@ html {
 }
 
 @media (max-width: 375px) {
+    .main {
+        margin: 1rem;
+    }
+
     .color_row {
         gap: 30px;
     }
