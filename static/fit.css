@@ -400,7 +400,7 @@ html {
 .mood_color_column {
     display: flex;
     flex-direction: row;
-    gap: 80px;
+    gap: 40px;
     padding-bottom: 20px;
     justify-content: center;
 }
@@ -671,17 +671,57 @@ html {
 
 /* Media Queries */
 
+@media (max-width: 1439px) and (min-width: 1025px) {
+    /* -- Travel XP Personas -- */
+
+    .travel_persona {
+        height: 300px;
+    }
+
+    /* -- Travel XP User Stories -- */
+
+    .travel_xp_page .diagram_img {
+        height: 550px;
+    }
+
+    /* -- Travel XP Style Guide -- */
+
+    .travel_icons {
+        width: 100%;
+    }
+
+    /* -- Your Tunes Mood -- */
+
+    .mood_container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* -- Your Tunes Designs -- */
+
+    .tunes_page .native_icon_container {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+}
+
 @media (max-width: 1024px) and (min-width: 769px) {
     /*.user_need_img {
         height: 60%;
     } */
+
+    .pic_container {
+        flex-direction: column;
+        align-items: center;
+    }
 
     #stretch_img {
         height: 60%;
     }
 
     .diagram_img {
-        height: 600px;
+        height: 500px;
     }
 
     .list ul {
@@ -706,10 +746,46 @@ html {
         height: 250px;
     }
 
+    /* -- Games N Things User Stories -- */
+
+    .games_page .diagram_img {
+        height: 300px;
+    }
+
+    /* -- Games N Things Style Guide -- */
+
+    .games_page .color_row {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .games_page .native_icon_container {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
     /* -- Travel XP Style Guide -- */
 
     .travel_icons {
-        width: 600px;
+        width: 100%;
+    }
+
+    .travel_xp_page .color_row {
+        gap: 20px;
+    }
+
+    /* -- Fit For You Native App Designs -- */
+
+    .fit_page .color_row {
+        gap: 30px;
+    }
+
+    .fit_page .native_icon_container {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: start;
     }
 
     /*-- Your Tunes Mood -- */
@@ -717,6 +793,10 @@ html {
     .mood_container {
         flex-direction: column;
         align-items: center;
+    }
+
+    .mood_img {
+        height: 175px;
     }
 
     .mood_color_container {
@@ -742,8 +822,20 @@ html {
 
     /* -- Your Tunes Designs -- */
 
+    .tunes_page .color_row {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
     .tunes_page .fit_icons {
         height: 30px;
+    }
+
+    .tunes_page .native_icon_container {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: start;
     }
 }
 
@@ -857,6 +949,7 @@ html {
         grid-template-columns: 1fr;
     }
 }
+
 /*
 @media (min-width: 427px) and (max-width: 767px) {
     .text_pic_container {
@@ -910,6 +1003,12 @@ html {
 }
 
 */
+
+@media (max-width: 768px) and (min-width: 320px) {
+    .main {
+        margin: 0 1.3rem;
+    }
+}
 
 @media (max-width: 767px) and (min-width: 320px) {
     .main {
@@ -1032,6 +1131,12 @@ html {
 
     .tunes_page .color_row {
         justify-content: center;
+    }
+}
+
+@media (max-width: 424px) and (min-width: 376px) {
+    .mood_design_img {
+        gap: 10px;
     }
 }
 

@@ -46,3 +46,15 @@ main {
 .card_text {
     padding: 10px;
 }
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+    .case_section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
+        gap: 40px;
+        max-width: 750px; /* optional, to constrain width */
+        place-items: center;
+        margin: 0 auto;
+        padding: 40px 20px;
+    }
+}
