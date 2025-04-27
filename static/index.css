@@ -34,6 +34,10 @@ main {
 }
 
 @media (max-width: 768px) {
+    .main_content {
+        padding-top: 20px;
+    }
+
     .heading_index,
     .text_intro {
         width: 70%;
