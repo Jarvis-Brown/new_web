@@ -559,6 +559,12 @@ html {
     background-color: #ffffff;
 }
 
+/* -- Games N Things Typography -- */
+
+.games_page .app_design_text {
+    font-family: "Tw Cen MT";
+}
+
 /* -- Games N Things colors -- */
 
 .games_page .color_circle {
@@ -584,6 +590,12 @@ html {
 
 .games_color_5 {
     background-color: #ffffff;
+}
+
+/* -- Your Tunes Typography -- */
+
+.tunes_page .app_design_text {
+    font-family: "Yu Gothic UI", "Yu Gothic";
 }
 
 /* -- Your Tunes colors -- */
@@ -756,7 +768,7 @@ html {
 
     .games_page .color_row {
         gap: 10px;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         justify-content: start;
     }
 
@@ -824,7 +836,7 @@ html {
 
     .tunes_page .color_row {
         gap: 10px;
-        flex-wrap: wrap;
+        /* flex-wrap: wrap; */
         justify-content: start;
     }
 
