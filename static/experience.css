@@ -115,6 +115,10 @@ p {
     padding-bottom: 20px;
 }
 
+.space_div {
+    margin: 20px 0;
+}
+
 ul {
     padding: 0;
 }
@@ -174,7 +178,13 @@ ul {
     }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 767px) and (min-width: 570px) {
+    .job_title {
+        margin-right: 20px;
+    }
+}
+
+@media (max-width: 569px) {
     header {
         width: 85%;
     }
