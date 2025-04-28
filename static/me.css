@@ -108,5 +108,8 @@ footer {
     }
 }
 
-@media (min-width: 425px) {
+@media (max-width: 768px) {
+    main {
+        margin: 0 1.3rem;
+    }
 }
