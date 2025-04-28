@@ -59,6 +59,7 @@ header {
 
 main {
     padding: 20px 20px;
+    flex: 1;
 }
 
 .skills_container {

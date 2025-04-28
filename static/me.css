@@ -52,6 +52,7 @@ hr {
     gap: 20px;
 }
 
+/*
 footer {
     max-width: 100%;
     padding-bottom: 20px;
@@ -60,6 +61,14 @@ footer {
 .footer_text {
     text-align: center;
 }
+
+.footer_credit {
+    font-size: 12px;
+    color: gray;
+    text-align: center;
+    margin-top: 10px;
+}
+*/
 
 .icon_link {
     height: 2rem;
