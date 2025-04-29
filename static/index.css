@@ -3,6 +3,7 @@
 main {
     padding-top: calc(60px + 1rem);
     flex: 1;
+    min-height: 0;
 }
 
 .main_content {

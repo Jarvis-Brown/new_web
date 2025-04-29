@@ -5,6 +5,10 @@
 
 .new_main {
     width: 100%;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 
 main {
@@ -12,6 +16,8 @@ main {
     grid-template-columns: 30% 70%;
     padding-top: calc(60px + 2rem);
     margin: 0 2rem;
+    flex: 1;
+    min-height: 0;
 }
 
 .profile_pic_container {
@@ -37,6 +43,11 @@ main {
     height: 350px;
 }
 
+.contact_section {
+    text-align: center;
+    grid-column: 1/-1;
+}
+
 hr {
     border: none;
     height: 2px;
@@ -52,24 +63,6 @@ hr {
     gap: 20px;
 }
 
-/*
-footer {
-    max-width: 100%;
-    padding-bottom: 20px;
-}
-
-.footer_text {
-    text-align: center;
-}
-
-.footer_credit {
-    font-size: 12px;
-    color: gray;
-    text-align: center;
-    margin-top: 10px;
-}
-*/
-
 .icon_link {
     height: 2rem;
     transition: filter 0.3s ease, transform 0.3s ease;
@@ -79,6 +72,10 @@ footer {
     transform: scale(1.1);
     filter: brightness(0) saturate(100%) invert(51%) sepia(94%) saturate(336%)
         hue-rotate(65deg) brightness(100%) contrast(92%);
+}
+
+footer {
+    grid-column: 1/-1;
 }
 
 @media (min-width: 2560px) {
