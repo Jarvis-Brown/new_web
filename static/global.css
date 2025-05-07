@@ -24,6 +24,52 @@ body {
     flex-direction: column;
 }
 
+@font-face {
+    font-family: "Tw Cen MT";
+    src: url("./fonts/TwCenMTStd.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Tw Cen MT";
+    src: url("./fonts/TwCenMTStdBold.otf") format("opentype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Tw Cen MT";
+    src: url("./fonts/TwCenMTStdItalic.otf") format("opentype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Yu Gothic UI";
+    src: url("./fonts/YUGOTHR.TTC") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Yu Gothic UI Bold";
+    src: url("./fonts/YUGOTHB.TTC") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Yu Gothic UI Light";
+    src: url("./fonts/YUGOTHL.TTC") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Yu Gothic UI Medium";
+    src: url("./fonts/YUGOTHM.TTC") format("truetype");
+    font-weight: 500;
+}
+
 .new_main {
     flex: 1;
 }

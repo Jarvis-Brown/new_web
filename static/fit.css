@@ -563,6 +563,7 @@ html {
 
 .games_page .app_design_text {
     font-family: "Tw Cen MT";
+    font-style: normal;
 }
 
 /* -- Games N Things colors -- */
@@ -596,6 +597,15 @@ html {
 
 .tunes_page .app_design_text {
     font-family: "Yu Gothic UI", "Yu Gothic";
+}
+
+.tunes_page .gothic_bold {
+    font-family: "Yu Gothic UI Bold";
+    font-weight: 700;
+}
+
+.tunes_page .gothic_semi {
+    font-family: "Yu Gothic UI Medium";
 }
 
 /* -- Your Tunes colors -- */
