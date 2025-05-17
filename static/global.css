@@ -121,6 +121,7 @@ nav.no-border {
     list-style: none;
     padding: 0;
     align-items: center;
+    line-height: 2rem;
 }
 
 .nav-menu.with-border {
