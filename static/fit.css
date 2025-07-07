@@ -692,6 +692,48 @@ html {
     max-width: 80%;
 }
 
+/* -- Prototypes -- */
+
+.travel-proto-btn {
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 10px 15px;
+    background-color: var(--travel-accent);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.travel-proto-btn:hover {
+    background-color: var(--travel-accent-2);
+    color: white;
+}
+
+.game-proto-btn {
+    display: inline-block;
+    margin-bottom: 40px;
+    padding: 10px 15px;
+    background-color: var(--games-accent);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-proto-btn:hover {
+    background-color: var(--games-main);
+    color: white;
+}
+
+.proto-text {
+    font-size: 35px;
+    color: white;
+    text-decoration: none;
+}
+
 /* Media Queries */
 
 @media (max-width: 1439px) and (min-width: 1025px) {
