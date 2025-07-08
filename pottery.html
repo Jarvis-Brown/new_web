@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="/static/global.css" />
         <link rel="stylesheet" href="/static/fit.css" />
-        <title>Brooklyn Red Handcrafted Pots</title>
+        <title>Brooklyn Red | Handmade Pottery and Ceramic Art</title>
     </head>
     <body>
         <nav class="nav-bar">
@@ -41,7 +41,7 @@
         </nav>
 
         <div class="new_main">
-            <div class="main tunes_page">
+            <div class="main pottery_page">
                 <!--Overview-->
                 <div class="info_section">
                     <div class="text_pic_container">
@@ -52,19 +52,18 @@
                                 </div>
                                 <div>
                                     <p>
-                                        BJ Pottery is a minimalist,
-                                        image-forward portfolio site built for a
-                                        ceramic artist to showcase and manage
-                                        her latest work. The project began as a
-                                        personal collaboration but was
-                                        approached as a real-world client
-                                        challenge — with full ownership of
-                                        design, development, and
-                                        problem-solving. The site features a
-                                        responsive layout, clean aesthetic, and
-                                        a custom admin-only interface for
-                                        uploading, sorting, and deleting
-                                        artwork.
+                                        Brooklyn Red Handmade Pottery and
+                                        Ceramic Art is a minimalist,
+                                        image-forward portfolio site built for
+                                        ceramic artist Brooklyn Red to showcase
+                                        and manage her latest work. I was
+                                        responsible for the entire project —
+                                        from design and frontend development to
+                                        backend setup and problem-solving. The
+                                        site features a responsive layout, clean
+                                        aesthetic, and a custom admin-only
+                                        interface for uploading, sorting, and
+                                        managing gallery images.
                                     </p>
                                 </div>
                             </div>
@@ -87,12 +86,21 @@
                                     </p>
                                 </div>
                             </div>
+
+                            <button class="pottery-proto-btn">
+                                <a
+                                    class="proto-text"
+                                    target="_blank"
+                                    href="https://bj-campbell.com/"
+                                    >Visit Site</a
+                                >
+                            </button>
                         </div>
                         <div class="pic_container">
                             <img
-                                class="phone_img android_phone_img"
-                                src="/static/images/your_tunes/high_fi/yourtunes_high_fi_1.png"
-                                alt="image of Your Tunes screen"
+                                class="overview_user_need_img"
+                                src="/static/images/Pottery/pottery_home_page.png"
+                                alt="image of pottery site home page"
                             />
                         </div>
                     </div>
@@ -109,36 +117,53 @@
                                 structured lessons and solving real-world
                                 problems independently. This project pushed me
                                 to take on unfamiliar territory — especially
-                                when it came to connecting the front end to a
-                                working backend.
+                                when it came to connecting the frontend to a
+                                working backend. Some of the biggest challenges
+                                included:
                             </p>
-                            <p>Some of the biggest challenges included:</p>
                         </div>
+                    </div>
+                </div>
+                <div class="info_section">
+                    <div class="list_info_container">
+                        <div class="list_info">
+                            <div class="list_pic_container">
+                                <div class="list">
+                                    <ul>
+                                        <li>
+                                            Figuring out how to store and manage
+                                            image data using Firebase, including
+                                            uploads, deletions, and tracking
+                                            sort order.
+                                        </li>
+                                        <li>
+                                            Implementing a drag-and-drop
+                                            sortable gallery, something I hadn’t
+                                            done before and had to piece
+                                            together from documentation and
+                                            community examples.
+                                        </li>
+                                        <li>
+                                            Setting up Firebase Authentication
+                                            to protect admin-only functionality.
+                                        </li>
+                                        <li>
+                                            Learning to problem-solve without
+                                            step-by-step instructions, often
+                                            debugging JavaScript or Firebase
+                                            behaviors through trial and error.
+                                        </li>
+                                    </ul>
+                                </div>
 
-                        <div class="list">
-                            <ul>
-                                <li>
-                                    Figuring out how to store and manage image
-                                    data using Firebase, including uploads,
-                                    deletions, and tracking sort order.
-                                </li>
-                                <li>
-                                    Implementing a drag-and-drop sortable
-                                    gallery, something I hadn’t done before and
-                                    had to piece together from documentation and
-                                    community examples.
-                                </li>
-                                <li>
-                                    Setting up Firebase Authentication to
-                                    protect admin-only functionality.
-                                </li>
-                                <li>
-                                    Learning to problem-solve without
-                                    step-by-step instructions, often debugging
-                                    JavaScript or Firebase behaviors through
-                                    trial and error.
-                                </li>
-                            </ul>
+                                <div class="pic_container">
+                                    <img
+                                        class="user_need_img"
+                                        src="/static/images/Pottery/firebase_function.png"
+                                        alt="image of javascript code"
+                                    />
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -175,7 +200,8 @@
                                         <li>
                                             An easy way for the artist to
                                             upload, reorder, and remove images
-                                            without using a third-party CMS
+                                            without using a third-party Content
+                                            Management System
                                         </li>
                                         <li>
                                             Minimalist branding and elegant
@@ -192,8 +218,8 @@
                                 <div class="pic_container">
                                     <img
                                         class="user_need_img"
-                                        src="/static/images/fit_for_you/pushup_man.png"
-                                        alt="image of fit for you screen"
+                                        src="/static/images/Pottery/pottery_gallery_page.png"
+                                        alt="image of pottery gallery"
                                     />
                                 </div>
                             </div>
@@ -202,70 +228,59 @@
                 </div>
 
                 <!--Solution-->
-                <div class="text_pic_container">
-                    <div class="text_container">
-                        <div class="info_section">
-                            <div class="title_container"><h3>Solution</h3></div>
-                            <div>
-                                <p>
-                                    I designed and developed a fully responsive
-                                    single-page site using HTML, CSS,
-                                    JavaScript, and Firebase. The entire backend
-                                    is invisible to visitors, but powerful
-                                    enough for the artist to update her gallery
-                                    from any device. Key features include:
-                                </p>
-                            </div>
+                <div class="text_container">
+                    <div class="info_section">
+                        <div class="title_container"><h3>Solution</h3></div>
+                        <div>
+                            <p>
+                                I designed and developed a fully responsive
+                                single-page site using HTML, CSS, JavaScript,
+                                and Firebase. The entire backend is invisible to
+                                visitors, but powerful enough for the artist to
+                                update her gallery from any device. Key features
+                                include:
+                            </p>
                         </div>
-                        <div class="info_section">
-                            <div class="list_info_container">
-                                <div class="list_info">
-                                    <div class="list_pic_container">
-                                        <div class="list">
-                                            <ul>
-                                                <li>
-                                                    Firebase Authentication for
-                                                    secure login
-                                                </li>
-                                                <li>
-                                                    Image upload & delete system
-                                                    for managing artwork
-                                                </li>
-                                                <li>
-                                                    Drag-and-drop gallery
-                                                    reordering, with saved sort
-                                                    order in Firestore
-                                                </li>
-                                                <li>
-                                                    Reusable UI components and
-                                                    clean, scalable design
-                                                </li>
-                                                <li>
-                                                    Custom color palette and
-                                                    typography based on the
-                                                    artist’s brand tone
-                                                </li>
-                                            </ul>
-                                        </div>
+                    </div>
+                </div>
+                <div class="info_section">
+                    <div class="list_info_container">
+                        <div class="list_info">
+                            <div class="list_pic_container">
+                                <div class="list">
+                                    <ul>
+                                        <li>
+                                            Firebase Authentication for secure
+                                            login
+                                        </li>
+                                        <li>
+                                            Image upload & delete system for
+                                            managing artwork
+                                        </li>
+                                        <li>
+                                            Drag-and-drop gallery reordering,
+                                            with saved sort order in Firestore
+                                        </li>
+                                        <li>
+                                            Reusable UI components and clean,
+                                            scalable design
+                                        </li>
+                                        <li>
+                                            Custom color palette and typography
+                                            based on the artist’s brand tone
+                                        </li>
+                                    </ul>
+                                </div>
 
-                                        <div class="pic_container">
-                                            <img
-                                                class="phone_img android_phone_img"
-                                                src="/static/images/your_tunes/high_fi/yourtunes_high_fi_7.png"
-                                                alt="image of fit for you screen"
-                                            />
-                                        </div>
-                                    </div>
+                                <div class="pic_container">
+                                    <img
+                                        class="user_need_img"
+                                        src="/static/images/Pottery/fetching_images_code.png"
+                                        alt="image of javascript code"
+                                    />
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="pic_container">
-                        <img
-                            class="user_need_img"
-                            src="/static/images/your_tunes/yourtunes_solution.png"
-                            alt="image of woman running and listening to music"
-                        />
                     </div>
                 </div>
 
@@ -281,11 +296,20 @@
                             </div>
                             <div class="app_design_text">
                                 <p>Cormorant Garamond</p>
-                                <p>Brittany Signature</p>
+
                                 <p>
                                     Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo
                                     Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
                                 </p>
+                                <p>
+                                    <span class=".gothic_bold"
+                                        ><strong>Bold</strong></span
+                                    >
+                                    /
+                                    <span class="gothic_semi">Semibold </span>/
+                                    Regular
+                                </p>
+                                <p>Brittany Signature</p>
                                 <p>
                                     Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo
                                     Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz
@@ -309,33 +333,33 @@
                                 <div class="color_row">
                                     <div class="color_group">
                                         <div
-                                            class="color_circle tunes_color_1"
-                                        ></div>
-                                        <p class="color_text">#CCCCFF</p>
-                                    </div>
-                                    <div class="color_group">
-                                        <div
-                                            class="color_circle tunes_color_2"
+                                            class="color_circle pottery_color_1"
                                         ></div>
                                         <p class="color_text">#7171AA</p>
                                     </div>
                                     <div class="color_group">
                                         <div
-                                            class="color_circle tunes_color_3"
+                                            class="color_circle pottery_color_2"
                                         ></div>
-                                        <p class="color_text">#BFB78F</p>
+                                        <p class="color_text">#CCCCFF</p>
+                                    </div>
+                                    <div class="color_group">
+                                        <div
+                                            class="color_circle pottery_color_3"
+                                        ></div>
+                                        <p class="color_text">#807440</p>
                                     </div>
                                 </div>
                                 <div class="color_row">
                                     <div class="color_group">
                                         <div
-                                            class="color_circle tunes_color_4"
+                                            class="color_circle pottery_color_4"
                                         ></div>
-                                        <p class="color_text">#807440</p>
+                                        <p class="color_text">#BFB78F</p>
                                     </div>
                                     <div class="color_group">
                                         <div
-                                            class="color_circle tunes_color_6"
+                                            class="color_circle pottery_color_5"
                                         ></div>
                                         <p class="color_text">#F5F5F5</p>
                                     </div>
@@ -344,23 +368,26 @@
                         </div>
                     </div>
                     <div>
-                        <div class="sub_header">
-                            <h4>Icons</h4>
+                        <div class="sub_header pottery_sub_header">
+                            <h4>Illustration</h4>
                         </div>
-                        <div class="native_icon_container">
+                        <div>
                             <img
                                 class="fit_icons"
-                                src="static/images/your_tunes/icons/yourtunes_icon_library.png"
-                                alt="image of library icon"
-                            />
-                            <img
-                                class="fit_icons"
-                                src="static/images/your_tunes/icons/yourtunes_icon_down.png"
-                                alt="image of down icon"
+                                src="static/images/pottery/brittany_pottery_web.png"
+                                alt="image of pottery icon"
                             />
                         </div>
                     </div>
                 </div>
+                <button class="pottery-proto-btn">
+                    <a
+                        class="proto-text"
+                        target="_blank"
+                        href="https://www.figma.com/proto/kyUVMgbYS4lStA8zDuTxYP/BJ-Pottery-Website?node-id=1-6&p=f&t=6tuGTAyOcfCYIvoZ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A6"
+                        >Prototype</a
+                    >
+                </button>
 
                 <!--High Fidelity-->
                 <div class="text_container">
@@ -378,31 +405,19 @@
                         <div class="final_phone">
                             <img
                                 class="fit_ios_final"
-                                src="/static/images/your_tunes/high_fi/yourtunes_high_fi_1.png"
+                                src="/static/images/Pottery/pottery_home_page.png"
                                 alt="image of Your Tune music screen on iphone"
                             /><img
                                 class="fit_ios_final"
-                                src="/static/images/your_tunes/high_fi/yourtunes_high_fi_2.png"
+                                src="/static/images/Pottery/pottery_gallery_page.png"
                                 alt="image of Your Tune music screen on iphone"
                             /><img
                                 class="fit_ios_final"
-                                src="/static/images/your_tunes/high_fi/yourtunes_high_fi_3.png"
+                                src="/static/images/Pottery/pottery_about_page.png"
                                 alt="image of Your Tune music screen on iphone"
                             /><img
                                 class="fit_ios_final"
-                                src="/static/images/your_tunes/high_fi/yourtunes_high_fi_4.png"
-                                alt="image of Your Tune music screen on iphone"
-                            /><img
-                                class="fit_ios_final"
-                                src="/static/images/your_tunes/high_fi/yourtunes_high_fi_5.png"
-                                alt="image of Your Tune music screen on iphone"
-                            /><img
-                                class="fit_ios_final"
-                                src="/static/images/your_tunes/high_fi/yourtunes_high_fi_6.png"
-                                alt="image of Your Tune music screen on iphone"
-                            /><img
-                                class="fit_ios_final"
-                                src="/static/images/your_tunes/high_fi/yourtunes_high_fi_7.png"
+                                src="/static/images/Pottery/pottery_contact_page.png"
                                 alt="image of Your Tune music screen on iphone"
                             />
                         </div>
@@ -410,57 +425,54 @@
                 </div>
 
                 <!-- Takeaways -->
+
                 <div class="text_container">
                     <div class="info_section">
-                        <div class="title_container">
-                            <h3>Takeaways</h3>
+                        <div class="title_container"><h3>Takeaways</h3></div>
+                        <div>
+                            <p>
+                                This project was a turning point in my journey
+                                as a front-end designer and developer. It also
+                                reinforced the value of close collaboration and
+                                listening to feedback, even for personal
+                                projects. This case study is a reflection of
+                                both creative flexibility and technical growth.
+                                I gained hands-on experience with:
+                            </p>
                         </div>
-                        <div class="list_info_container">
-                            <div class="list_info">
-                                <div class="list_pic_container">
-                                    <div class="paragraph_info">
-                                        <p>
-                                            This project was a turning point in
-                                            my journey as a front-end designer
-                                            and developer. It also reinforced
-                                            the value of close collaboration and
-                                            listening to feedback, even for
-                                            personal projects. This case study
-                                            is a reflection of both creative
-                                            flexibility and technical growth. I
-                                            gained hands-on experience with:
-                                        </p>
-                                    </div>
+                    </div>
+                </div>
+                <div class="info_section">
+                    <div class="list_info_container">
+                        <div class="list_info">
+                            <div class="list_pic_container">
+                                <div class="list">
+                                    <ul>
+                                        <li>
+                                            Firebase Storage, Firestore, and
+                                            Authentication
+                                        </li>
+                                        <li>
+                                            Structuring dynamic JavaScript for
+                                            real-world functionality
+                                        </li>
+                                        <li>
+                                            Solving UI/UX problems through both
+                                            design and code
+                                        </li>
+                                        <li>
+                                            Learning how to ship a real product
+                                            while learning on the fly
+                                        </li>
+                                    </ul>
+                                </div>
 
-                                    <div class="list">
-                                        <ul>
-                                            <li>
-                                                Firebase Storage, Firestore, and
-                                                Authentication
-                                            </li>
-                                            <li>
-                                                Structuring dynamic JavaScript
-                                                for real-world functionality
-                                            </li>
-                                            <li>
-                                                Solving UI/UX problems through
-                                                both design and code
-                                            </li>
-                                            <li>
-                                                Learning how to ship a real
-                                                product while learning on the
-                                                fly
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                                    <div class="pic_container">
-                                        <img
-                                            class="takeaway_img"
-                                            src="/static/images/your_tunes/yourtunes_takeaway.png"
-                                            alt="image of hand holding phone looking at Your Tunes music screen"
-                                        />
-                                    </div>
+                                <div class="pic_container">
+                                    <img
+                                        class="user_need_img"
+                                        src="/static/images/Pottery/pottery_tablet_contact_page.png"
+                                        alt="image of responsive pottery contact page"
+                                    />
                                 </div>
                             </div>
                         </div>
