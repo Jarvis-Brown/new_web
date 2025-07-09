@@ -826,6 +826,10 @@ html {
 
 @media (max-width: 1439px) and (min-width: 1025px) {
     /* Pottery Overview */
+    .pottery_page .overview_user_need_img {
+        height: 300px;
+        margin-left: 30px;
+    }
 
     /* -- Travel XP Personas -- */
 
@@ -866,6 +870,18 @@ html {
         height: 60%;
     } */
 
+    /* Pottery Overview */
+    .pottery_page .overview_user_need_img {
+        height: 200px;
+
+        margin-left: 30px;
+        align-items: flex-start;
+    }
+
+    .pottery_page .pic_container {
+        justify-content: flex-start;
+    }
+
     .pic_container {
         flex-direction: column;
         align-items: center;
@@ -893,8 +909,6 @@ html {
     .fit_overview_img {
         height: 300px;
     }
-
-    /* -- Pottery Overview -- */
 
     /* -- Travel XP Personas -- */
 
