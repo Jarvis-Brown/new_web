@@ -70,6 +70,30 @@ body {
     font-weight: 500;
 }
 
+@font-face {
+    font-family: "Brittany Signature";
+    src: url("./fonts/BrittanySignature.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Cormorant Garamond Bold";
+    src: url("./fonts/CormorantGaramond-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Cormorant Garamond Semibold";
+    src: url("./fonts/CormorantGaramond-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Cormorant Garamond Regular";
+    src: url("./fonts/CormorantGaramond-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
 .new_main {
     flex: 1;
 }

@@ -488,6 +488,12 @@ html {
     padding-top: 30px;
 }
 
+/* -- Pottery Designs -- */
+
+.pottery_design_p {
+    padding-bottom: 10px;
+}
+
 /*Native App Designs*/
 
 .app_design_text {
@@ -646,6 +652,46 @@ html {
 .tunes_page .gothic_semi {
     font-family: "Yu Gothic UI Medium";
     font-weight: 600;
+}
+
+/* -- Pottery Typography -- */
+
+.brittany_signature {
+    font-family: "Brittany Signature";
+    font-size: larger;
+}
+
+.brittany_letters {
+    font-size: medium;
+}
+
+.brittany_word {
+    font-size: large;
+}
+
+.cormorant {
+    font-family: "Cormorant Garamond Regular";
+    font-size: x-large;
+}
+
+.cormorant_letters {
+    font-family: "Cormorant Garamond Regular";
+    font-size: larger;
+}
+
+.cormorant_bold {
+    font-family: "Cormorant Garamond Bold";
+    font-weight: bolder;
+}
+
+.cormorant_semibold {
+    font-family: "Cormorant Garamond Semibold";
+    font-weight: bolder;
+}
+
+.cormorant_regular {
+    font-family: "Cormorant Garamond Regular";
+    font-weight: normal;
 }
 
 /* -- Pottery colors - */
@@ -1119,6 +1165,12 @@ html {
         gap: 10px;
     }
 
+    /* -- Pottery High Fidelity -- */
+
+    .pottery_page .fit_ios_final {
+        max-height: 200px;
+    }
+
     /* -- Travel XP User Feedback -- */
 
     .travel_list_pic_container {
@@ -1332,6 +1384,12 @@ html {
 
     .color_row {
         gap: 30px;
+    }
+
+    /* -- Pottery Overview -- */
+
+    .pottery_page .overview_user_need_img {
+        height: 200px;
     }
 
     /* -- Travel XP Overview -- */
