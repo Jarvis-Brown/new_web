@@ -55,6 +55,44 @@ hr {
     background-color: black;
 }
 
+/* LINK GROUP — matches navbar link style */
+.link_group a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    font-family: "Yu Gothic UI", Tahoma, Verdana, sans-serif;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-right: 0.75rem; /* space for arrow */
+}
+
+/* Add arrow */
+.link_group a::after {
+    content: "  ⇨";
+    position: absolute;
+    right: -15px;
+    top: 0;
+    color: black;
+    transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.7;
+}
+
+/* Hover effect */
+.link_group a:hover {
+    color: var(--accent-color);
+}
+
+.link_group a:hover::after {
+    color: var(--accent-color);
+    transform: translateX(4px);
+    opacity: 1;
+}
+
+/* Optional: subtle bottom padding for spacing */
+.link_group {
+    padding: 10px 0;
+}
+
 .icon_group {
     display: flex;
     justify-content: center;
