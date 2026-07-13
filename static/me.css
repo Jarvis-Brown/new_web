@@ -57,33 +57,23 @@ hr {
 
 /* LINK GROUP — matches navbar link style */
 .link_group a {
-    color: black;
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: 500;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
     font-family: "Yu Gothic UI", Tahoma, Verdana, sans-serif;
     transition: color 0.3s ease;
     position: relative;
-    padding-right: 0.75rem; /* space for arrow */
-}
-
-/* Add arrow */
-.link_group a::after {
-    content: "  ⇨";
-    position: absolute;
-    right: -15px;
-    top: 0;
-    color: black;
-    transition: color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-    opacity: 0.7;
+    padding: 0.65rem 1rem;
 }
 
 /* Hover effect */
-.link_group a:hover {
-    color: var(--accent-color);
+.link_group:hover {
+    transform: translateY(-6px);
 }
 
 .link_group a:hover::after {
-    color: var(--accent-color);
     transform: translateX(4px);
     opacity: 1;
 }
@@ -91,6 +81,8 @@ hr {
 /* Optional: subtle bottom padding for spacing */
 .link_group {
     padding: 10px 0;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
 }
 
 .icon_group {
@@ -103,17 +95,15 @@ hr {
 
 .icon_link {
     height: 2rem;
-    transition: filter 0.3s ease, transform 0.3s ease;
+    transition:
+        filter 0.3s ease,
+        transform 0.3s ease;
 }
 
 .icon_link:hover {
     transform: scale(1.1);
     filter: brightness(0) saturate(100%) invert(51%) sepia(94%) saturate(336%)
         hue-rotate(65deg) brightness(100%) contrast(92%);
-}
-
-footer {
-    grid-column: 1/-1;
 }
 
 @media (min-width: 2560px) {

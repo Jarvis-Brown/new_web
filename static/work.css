@@ -37,9 +37,8 @@ main {
 }
 
 .card_area:hover {
-    transform: scale(1.1);
-    color: var(--accent-color);
-    will-change: transform;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.14);
 }
 
 .card_img {
@@ -47,7 +46,72 @@ main {
 }
 
 .card_text {
-    padding: 10px;
+    width: 100%;
+    padding: 1.25rem;
+    text-align: left;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card_text h4 {
+    margin: 0.25rem 0 0.75rem;
+}
+
+.card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    justify-content: center;
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.primary-link,
+.secondary-link {
+    display: inline-block;
+    padding: 0.65rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.primary-link {
+    background-color: var(--accent-color);
+    color: black;
+    transition: transform 0.3s ease;
+}
+
+.secondary-link {
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+.primary-link:hover,
+.secondary-link:hover {
+    transform: translateY(-4px);
+    transition: transform 0.3s ease;
+}
+
+.project-description {
+    line-height: 1.5;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.project-tags span {
+    padding: 0.3rem 0.65rem;
+    border-radius: 999px;
+    background-color: #eeeeee;
+    font-size: 0.8rem;
 }
 
 @media (max-width: 1440px) and (min-width: 1025px) {
@@ -55,10 +119,16 @@ main {
         display: grid;
         grid-template-columns: repeat(2, 1fr); /* 2 cards per row */
         gap: 40px;
+        justify-content: center;
         max-width: 750px; /* optional, to constrain width */
         place-items: center;
         margin: 0 auto;
         padding: 40px 20px;
+        align-items: stretch;
+    }
+
+    .card_area {
+        height: 100%;
     }
 }
 

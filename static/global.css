@@ -183,7 +183,8 @@ nav.no-border {
 }
 
 footer {
-    max-width: 100%;
+    width: 100%;
+    margin-top: auto;
     padding-bottom: 20px;
 }
 
