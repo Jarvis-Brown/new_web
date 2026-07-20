@@ -80,7 +80,7 @@ main {
 
 .primary-link {
     background-color: var(--accent-color);
-    color: black;
+    color: white;
     transition: transform 0.3s ease;
 }
 
@@ -94,6 +94,10 @@ main {
 .secondary-link:hover {
     transform: translateY(-4px);
     transition: transform 0.3s ease;
+}
+
+.primary-link:hover {
+    background-color: var(--accent-color-dark);
 }
 
 .project-description {

@@ -42,19 +42,33 @@ header {
     display: inline-block;
     margin-top: 15px;
     padding: 10px 15px;
-    background-color: #47cc1f21;
-    color: #47cc1f;
+    background-color: var(--accent-color);
+    color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    border: 2px solid var(--accent-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .resume-btn:hover {
-    background-color: #36a91d;
+    background-color: var(--accent-color-dark);
+    border-color: var(--accent-color-dark);
     color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
 }
+
+.resume-btn:focus-visible {
+    outline: 3px solid black;
+    outline-offset: 3px;
+}
+
 /* Main Content */
 
 main {
@@ -92,7 +106,7 @@ section {
 }
 
 h3 {
-    color: #47cc1f;
+    color: var(--accent-color);
     font-size: 1.8rem;
     padding-bottom: 20px;
     text-align: center;
@@ -135,7 +149,7 @@ ul {
 /* Contact */
 
 .contact p a {
-    color: #47cc1f;
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: bold;
 }
