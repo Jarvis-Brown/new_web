@@ -142,3 +142,16 @@ hr {
         margin: 0 1.3rem;
     }
 }
+
+@media (max-width: 375px) {
+    .icon_group {
+        flex-wrap: wrap;
+        max-width: 50%;
+        margin-inline: auto;
+    }
+
+    .icon_group a {
+        justify-content: center;
+        flex-basis: calc(50% - 10px);
+    }
+}
