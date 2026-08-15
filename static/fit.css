@@ -20,6 +20,13 @@
     --pottery-light-brown: #bfb78f;
     --pottery-purple: #7171aa;
     --pottery-light-purple: #ccccff;
+    --honey-darkest-brown: #3a3732;
+    --honey-dark-brown: #8e7856;
+    --honey-mid-brown: #ffd188;
+    --honey-light-brown: #ffe2b3;
+    --honey-accent: #ff5547;
+    --honey-outline: #ffa250;
+    --honey-inside: #ffe165;
 }
 
 h3 {
@@ -142,6 +149,14 @@ html {
 .pic_container {
     display: flex;
     justify-content: center;
+}
+
+.honey_overview_img {
+    max-height: 100%;
+    height: 300px;
+    margin-left: 20px;
+    display: block;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .pottery_page .overview_user_need_img {
@@ -726,6 +741,40 @@ html {
     height: 80px;
 }
 
+/* -- Honey Split  colors-- */
+
+.honey_color_1 {
+    background-color: var(--honey-darkest-brown);
+}
+
+.honey_color_2 {
+    background-color: var(--honey-dark-brown);
+}
+
+.honey_color_3 {
+    background-color: var(--honey-mid-brown);
+}
+
+.honey_color_4 {
+    background-color: var(--honey-light-brown);
+}
+
+.honey_color_5 {
+    background-color: var(--honey-outline);
+}
+
+.honey_color_6 {
+    background-color: var(--honey-inside);
+}
+
+.honey_color_7 {
+    background-color: var(--honey-accent);
+}
+
+.honey_color_8 {
+    background-color: var(--white);
+}
+
 /* -- Your Tunes colors -- */
 
 .tunes_color_1 {
@@ -871,6 +920,13 @@ html {
 /* Media Queries */
 
 @media (max-width: 1439px) and (min-width: 1025px) {
+    /* Honey Overview */
+    .honey_overview_img {
+        height: 200px;
+        margin-left: 30px;
+        margin-right: 0px;
+    }
+
     /* Pottery Overview */
     .pottery_page .overview_user_need_img {
         height: 300px;
@@ -915,6 +971,11 @@ html {
     /*.user_need_img {
         height: 60%;
     } */
+
+    .honey_overview_img {
+        height: 150px;
+        align-items: flex-start;
+    }
 
     /* Pottery Overview */
     .pottery_page .overview_user_need_img {
@@ -1086,6 +1147,12 @@ html {
         height: 40px;
     }
 
+    /*-- Honey Overview -- */
+    .honey_overview_img {
+        height: 200px;
+        margin-left: 0px;
+    }
+
     /* -- Pottery Overview -- */
 
     .pottery_page .overview_user_need_img {
@@ -1238,6 +1305,10 @@ html {
         margin: 0 1.3rem;
     }
 
+    .honey_overview_img {
+        height: 150px;
+    }
+
     .pottery_page .overview_user_need_img {
         height: 200px;
     }
@@ -1384,6 +1455,10 @@ html {
 
     .color_row {
         gap: 30px;
+    }
+
+    .honey_overview_img {
+        height: 120px;
     }
 
     /* -- Pottery Overview -- */
