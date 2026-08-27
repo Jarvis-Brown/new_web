@@ -10,8 +10,8 @@
             name="description"
             content="Explore Jarvis Brown’s resume and experience as a frontend designer, UI/UX designer, and animator. View technical skills, certifications, and past projects."
         />
-        <link rel="stylesheet" href="/static/global.css" />
-        <link rel="stylesheet" href="/static/experience.css" />
+        <link rel="stylesheet" href="../static/css/global.css" />
+        <link rel="stylesheet" href="../static/css/experience.css" />
     </head>
     <body>
         <nav class="nav-bar">
@@ -20,22 +20,22 @@
                     <a href="index.html"
                         ><img
                             class="logo"
-                            src="/static/images/logo.png"
+                            src="../static/images/logo.png"
                             alt="logo of Jarvis Brown Initials"
                     /></a>
                 </div>
 
                 <ul class="nav-menu">
                     <li class="nav_item">
-                        <a href="/work.html" class="nav-link">Work</a>
+                        <a href="work.html" class="nav-link">Work</a>
                     </li>
                     <li class="nav_item">
-                        <a href="/experience.html" class="nav-link"
+                        <a href="experience.html" class="nav-link"
                             >Experience</a
                         >
                     </li>
                     <li class="nav_item">
-                        <a href="/me.html" class="nav-link">About Me</a>
+                        <a href="me.html" class="nav-link">About Me</a>
                     </li>
                 </ul>
                 <div class="hamburger">
@@ -43,16 +43,19 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
+                <div class="nav_border"></div>
             </div>
         </nav>
 
         <div class="main_content">
             <header>
                 <div class="container">
-                    <h1>Jarvis Brown</h1>
-                    <h2>Frontend Designer | UI/UX Designer | Animator</h2>
+                    <h1 class="header_h1_xp">Jarvis Brown</h1>
+                    <h2 class="header_h2_xp">
+                        Frontend Designer | UI/UX Designer | Animator
+                    </h2>
                     <a
-                        href="/static/images/resume.pdf"
+                        href="../static/images/resume.pdf"
                         download
                         class="resume-btn"
                         >Download Resume</a
@@ -361,7 +364,8 @@
         </footer>
 
         <button id="scrollToTopBtn" title="Go to Top">↑</button>
-
-        <script src="/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+        <script type="module" src="../js/script.js"></script>
     </body>
 </html>

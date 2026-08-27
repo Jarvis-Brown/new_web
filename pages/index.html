@@ -9,8 +9,8 @@
             content="Jarvis Brown is a Frontend Designer and Animator based in Philadelphia, combining design, code, and motion to create engaging digital experiences."
         />
 
-        <link rel="stylesheet" href="/static/global.css" />
-        <link rel="stylesheet" href="/static/index.css" />
+        <link rel="stylesheet" href="../static/css/global.css" />
+        <link rel="stylesheet" href="../static/css/index.css" />
     </head>
     <body>
         <nav class="nav-bar">
@@ -19,22 +19,22 @@
                     <a href="index.html"
                         ><img
                             class="logo"
-                            src="/static/images/logo.png"
+                            src="../static/images/logo.png"
                             alt="logo of Jarvis Brown Initials"
                     /></a>
                 </div>
 
                 <ul class="nav-menu">
                     <li class="nav_item">
-                        <a href="/work.html" class="nav-link">Work</a>
+                        <a href="work.html" class="nav-link">Work</a>
                     </li>
                     <li class="nav_item">
-                        <a href="/experience.html" class="nav-link"
+                        <a href="experience.html" class="nav-link"
                             >Experience</a
                         >
                     </li>
                     <li class="nav_item">
-                        <a href="/me.html" class="nav-link">About Me</a>
+                        <a href="me.html" class="nav-link">About Me</a>
                     </li>
                 </ul>
                 <div class="hamburger">
@@ -42,6 +42,7 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
+                <div class="nav_border"></div>
             </div>
         </nav>
 
@@ -62,16 +63,16 @@
                 <div class="bell_gif_img">
                     <img
                         id="bell_gif"
-                        src="static/images/bellgif.gif"
+                        src="../static/images/bellgif.gif"
                         alt="bell swinging gif"
                     />
                 </div>
             </div>
             <div class="specialties">
-                <h3><span>D</span>esign</h3>
-                <h3><span>C</span>ode</h3>
-                <h3><span>M</span>otion</h3>
-                <h3><span>S</span>torytelling</h3>
+                <h3 class="code_word"><span>D</span>esign</h3>
+                <h3 class="code_word"><span>C</span>ode</h3>
+                <h3 class="code_word"><span>M</span>otion</h3>
+                <h3 class="code_word"><span>S</span>torytelling</h3>
             </div>
         </main>
         <footer>
@@ -79,6 +80,8 @@
                 Designed and developed by Jarvis Brown © 2025
             </p>
         </footer>
-        <script src="/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+        <script type="module" src="../js/script.js"></script>
     </body>
 </html>

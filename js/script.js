@@ -1,6 +1,12 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-const nav = document.querySelector("nav");
+gsap.registerPlugin(ScrollTrigger);
+
+import "./animation_js/nav_animation.js";
+import "./animation_js/index_animation.js";
+import "./animation_js/work_animation.js";
+import "./animation_js/experience_animation.js";
+import "./animation_js/me_animation.js";
+
+import { hamburger, navMenu, nav } from "./dom.js";
 
 // ✅ 1. RESET NAVBAR ON PAGE LOAD (Prevents persistent class issues)
 window.addEventListener("DOMContentLoaded", () => {
@@ -67,7 +73,7 @@ document.querySelectorAll(".nav-link").forEach((n) =>
         navMenu.style.display = "none";
 
         console.log("Nav link clicked, menu closed.");
-    })
+    }),
 );
 
 // Scroll Button

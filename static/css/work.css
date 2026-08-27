@@ -7,11 +7,15 @@ main {
 .header {
     text-align: center;
     padding-bottom: 10px;
+    transform: translateY(-10px);
+    opacity: 0;
 }
 
 .text_area {
     padding: 0px 10% 20px 10%;
     text-align: left;
+    transform: translateY(-10px);
+    opacity: 0;
 }
 
 .card_section {
@@ -34,13 +38,16 @@ main {
     text-align: center;
     transition: transform 0.3s ease;
     will-change: transform;
+    opacity: 0;
+    transform: scale(0.98);
 }
 
+/*
 .card_area:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.14);
 }
-
+*/
 .card_img {
     width: 100%;
 }
@@ -53,6 +60,11 @@ main {
     display: flex;
     flex-direction: column;
     flex: 1;
+}
+
+.card_txt {
+    opacity: 0;
+    transform: translateX(-5px);
 }
 
 .card_text h4 {
@@ -81,20 +93,26 @@ main {
 .primary-link {
     background-color: var(--accent-color);
     color: white;
-    transition: transform 0.3s ease;
+    transform: translateY(10px);
+    opacity: 0;
+    /*transition: transform 0.3s ease;*/
 }
 
 .secondary-link {
     border: 1px solid var(--accent-color);
     color: var(--accent-color);
-    transition: transform 0.3s ease;
+    transform: translateY(-10px);
+    opacity: 0;
 }
 
+/*
 .primary-link:hover,
 .secondary-link:hover {
     transform: translateY(-4px);
     transition: transform 0.3s ease;
 }
+
+*/
 
 .primary-link:hover {
     background-color: var(--accent-color-dark);

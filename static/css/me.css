@@ -33,9 +33,18 @@ main {
     padding-bottom: 10px;
 }
 
+.profile_text_container h3,
+.profile_text_container p,
+.link_group {
+    opacity: 0;
+    transform: translateX(-10px);
+}
+
 .profile_picture {
     border-radius: 5%;
     height: 350px;
+    opacity: 0;
+    transform: translateX(10px);
 }
 
 .contact_section {
@@ -90,9 +99,21 @@ hr {
 
 .icon_link {
     height: 2rem;
+    opacity: 0;
+    transform: scale(0.8);
     transition:
         filter 0.3s ease,
         transform 0.3s ease;
+}
+
+.contact_section hr {
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: center;
+}
+
+.footer_text {
+    opacity: 0;
 }
 
 .icon_link:hover {

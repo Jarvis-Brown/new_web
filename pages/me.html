@@ -9,8 +9,8 @@
             content="About Jarvis Brown, a Frontend & UI Designer in Philadelphia who blends design, code, and motion to build accessible, intuitive interfaces. View UI work, experience, and contact."
         />
 
-        <link rel="stylesheet" href="/static/global.css" />
-        <link rel="stylesheet" href="/static/me.css" />
+        <link rel="stylesheet" href="../static/css/global.css" />
+        <link rel="stylesheet" href="../static/css/me.css" />
     </head>
     <body>
         <nav class="nav-bar">
@@ -19,22 +19,22 @@
                     <a href="index.html"
                         ><img
                             class="logo"
-                            src="/static/images/logo.png"
+                            src="../static/images/logo.png"
                             alt="logo of Jarvis Brown Initials"
                     /></a>
                 </div>
 
                 <ul class="nav-menu">
                     <li class="nav_item">
-                        <a href="/work.html" class="nav-link">Work</a>
+                        <a href="work.html" class="nav-link">Work</a>
                     </li>
                     <li class="nav_item">
-                        <a href="/experience.html" class="nav-link"
+                        <a href="experience.html" class="nav-link"
                             >Experience</a
                         >
                     </li>
                     <li class="nav_item">
-                        <a href="/me.html" class="nav-link">About Me</a>
+                        <a href="me.html" class="nav-link">About Me</a>
                     </li>
                 </ul>
                 <div class="hamburger">
@@ -42,6 +42,7 @@
                     <span class="bar"></span>
                     <span class="bar"></span>
                 </div>
+                <div class="nav_border"></div>
             </div>
         </nav>
 
@@ -52,7 +53,7 @@
                     <!-- change grid to 1fr when scaling down for media query so it takes the whole block-->
                     <img
                         class="profile_picture"
-                        src="/static/images/profile_pic.png"
+                        src="../static/images/profile_pic.png"
                         alt="profile picture"
                     />
                 </div>
@@ -138,25 +139,25 @@
                     <div class="icon_group">
                         <a href="mailto:brownjarvis21@gmail.com"
                             ><img
-                                src="/static/images/email_icon.svg"
+                                src="../static/images/email_icon.svg"
                                 class="icon_link"
                                 alt="email icon"
                         /></a>
                         <a href="https://www.linkedin.com/in/jarvis-brown/"
                             ><img
-                                src="/static/images/linkedin_icon.svg"
+                                src="../static/images/linkedin_icon.svg"
                                 class="icon_link"
                                 alt="linkedin icon"
                         /></a>
                         <a href="https://github.com/Jarvis-Brown"
                             ><img
-                                src="/static/images/github_icon.svg"
+                                src="../static/images/github_icon.svg"
                                 class="icon_link"
                                 alt="github icon"
                         /></a>
                         <a href="https://www.behance.net/brownjarvi025f"
                             ><img
-                                src="/static/images/behance_icon.svg"
+                                src="../static/images/behance_icon.svg"
                                 class="icon_link"
                                 alt="behance icon"
                         /></a>
@@ -173,8 +174,8 @@
             </p>
         </footer>
 
-        <script src="/script.js">
-            console.log("script is working here");
-        </script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+        <script type="module" src="../js/script.js"></script>
     </body>
 </html>

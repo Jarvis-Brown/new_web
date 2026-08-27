@@ -27,6 +27,23 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 800px;
     max-width: 100%;
+    opacity: 0;
+    transform: scale(0.98);
+}
+
+.header_h1_xp {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+.header_h2_xp {
+    opacity: 0;
+    transform: translateY(-10px);
+}
+
+h3 {
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 .header_hr {
@@ -34,6 +51,8 @@ header {
     margin: 10px;
     background-color: black;
     display: block;
+    opacity: 0;
+    transform: scaleX(80%);
 }
 
 /* Download Button */
@@ -48,19 +67,16 @@ header {
     font-weight: bold;
     border-radius: 5px;
     border: 2px solid var(--accent-color);
+    transform: translateY(-10px);
+    opacity: 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
-    transition:
-        background-color 0.3s ease,
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
 }
 
 .resume-btn:hover {
     background-color: var(--accent-color-dark);
     border-color: var(--accent-color-dark);
     color: white;
-    transform: translateY(-2px);
+
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.18);
 }
 
@@ -80,6 +96,11 @@ main {
     display: grid;
     grid-template-columns: 25% 50% 25%;
     text-align: center;
+}
+
+.skills_container p {
+    opacity: 0;
+    transform: translateY(-10px);
 }
 
 .design_skills {
@@ -122,6 +143,8 @@ p {
 .job_title {
     margin-bottom: 20px;
     text-align: left;
+    opacity: 0;
+    transform: translateX(-10px);
 }
 
 .job_container {
@@ -144,6 +167,11 @@ ul {
     padding: 8px 12px;
     margin: 5px;
     border-radius: 5px;
+}
+
+.job_info {
+    opacity: 0;
+    transform: translateX(10px);
 }
 
 /* Contact */

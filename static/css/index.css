@@ -20,8 +20,10 @@ h2 {
     flex-direction: column;
     align-items: center;
     flex: 1;
-    padding-top: calc(56px + 2rem);
+    /*padding-top: calc(56px + 2rem);
     /* min-height: 100vh; */
+
+    padding-top: 1rem;
     text-align: center;
 }
 
@@ -53,6 +55,14 @@ h2 {
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 50px;
+}
+
+.heading_index,
+.text_intro,
+.bell_gif_img,
+.code_word {
+    opacity: 0;
+    transform: translateY(-40px);
 }
 
 .specialties h3 span {

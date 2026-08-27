@@ -26,71 +26,71 @@ body {
 
 @font-face {
     font-family: "Tw Cen MT";
-    src: url("./fonts/TwCenMTStd.otf") format("opentype");
+    src: url("../../fonts/TwCenMTStd.otf") format("opentype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Tw Cen MT";
-    src: url("./fonts/TwCenMTStdBold.otf") format("opentype");
+    src: url("../../fonts/TwCenMTStdBold.otf") format("opentype");
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Tw Cen MT";
-    src: url("./fonts/TwCenMTStdItalic.otf") format("opentype");
+    src: url("../../fonts/TwCenMTStdItalic.otf") format("opentype");
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: "Yu Gothic UI";
-    src: url("./fonts/YUGOTHR.TTC") format("truetype");
+    src: url("../../fonts/YUGOTHR.TTC") format("truetype");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Yu Gothic UI Bold";
-    src: url("./fonts/YUGOTHB.TTC") format("truetype");
+    src: url("../../fonts/YUGOTHB.TTC") format("truetype");
     font-weight: 700;
 }
 
 @font-face {
     font-family: "Yu Gothic UI Light";
-    src: url("./fonts/YUGOTHL.TTC") format("truetype");
+    src: url("../../fonts/YUGOTHL.TTC") format("truetype");
     font-weight: 300;
 }
 
 @font-face {
     font-family: "Yu Gothic UI Medium";
-    src: url("./fonts/YUGOTHM.TTC") format("truetype");
+    src: url("../../fonts/YUGOTHM.TTC") format("truetype");
     font-weight: 500;
 }
 
 @font-face {
     font-family: "Brittany Signature";
-    src: url("./fonts/BrittanySignature.ttf") format("truetype");
+    src: url("../../fonts/BrittanySignature.ttf") format("truetype");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Cormorant Garamond Bold";
-    src: url("./fonts/CormorantGaramond-Bold.ttf") format("truetype");
+    src: url("../../fonts/CormorantGaramond-Bold.ttf") format("truetype");
     font-weight: 700;
 }
 
 @font-face {
     font-family: "Cormorant Garamond Semibold";
-    src: url("./fonts/CormorantGaramond-SemiBold.ttf") format("truetype");
+    src: url("../../fonts/CormorantGaramond-SemiBold.ttf") format("truetype");
     font-weight: 600;
 }
 
 @font-face {
     font-family: "Cormorant Garamond Regular";
-    src: url("./fonts/CormorantGaramond-Regular.ttf") format("truetype");
+    src: url("../../fonts/CormorantGaramond-Regular.ttf") format("truetype");
     font-weight: normal;
 }
 
@@ -98,12 +98,10 @@ body {
     flex: 1;
 }
 
-/* Can add this to keep navbar the same on all pages
 html {
     overflow-y: scroll;
     scrollbar-gutter: stable;
 }
-*/
 
 :root {
     /*--accent-color: #47cc1f;*/
@@ -131,19 +129,23 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 95%;
-    border-bottom: 2px solid black;
+    /*border-bottom: 2px solid black;*/
     padding-bottom: 0.5rem;
+}
+
+.nav_border {
+    position: absolute;
+    bottom: 0;
+    width: 95%;
+    height: 2px;
+    background-color: black;
+    transform-origin: left;
 }
 
 .logo {
     width: 50px;
-    transition: transform 0.7s ease;
     filter: brightness(0) saturate(100%) invert(37%) sepia(54%) saturate(1059%)
         hue-rotate(128deg) brightness(88%) contrast(91%);
-}
-
-.logo:hover {
-    transform: rotate(15deg);
 }
 
 nav.no-border {
@@ -207,6 +209,8 @@ footer {
     color: var(--footer-color);
     text-align: center;
     margin-top: 10px;
+    opacity: 0;
+    transform: scale(0.9);
 }
 
 .icon_link:hover {
