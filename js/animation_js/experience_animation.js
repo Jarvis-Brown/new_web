@@ -2,9 +2,23 @@ import { headerXp, headerOneXp, headerTwoXp, resumeBtn } from "../dom.js";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const isExperiencePage = window.location.pathname.includes("experience.html");
+const currentPage = window.location.pathname
+    .split("/")
+    .filter(Boolean)
+    .pop()
+    ?.replace(/\.html$/i, "");
+
+const isExperiencePage = currentPage === "experience";
 
 if (isExperiencePage) {
+    // Keep content visible when JavaScript or the animation CDN is unavailable.
+    // GSAP owns the hidden starting state only after it has loaded successfully.
+    gsap.set(headerXp, { opacity: 0, scale: 0.98 });
+    gsap.set([headerOneXp, headerTwoXp, resumeBtn], {
+        opacity: 0,
+        y: -10,
+    });
+
     // ----------------------------------
     // MAIN HEADER
     // ----------------------------------

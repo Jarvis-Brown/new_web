@@ -9,9 +9,26 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
-const isMePage = window.location.pathname.includes("me.html");
+const currentPage = window.location.pathname
+    .split("/")
+    .filter(Boolean)
+    .pop()
+    ?.replace(/\.html$/i, "");
+
+const isMePage = currentPage === "me";
 
 if (isMePage) {
+    // Keep content visible when JavaScript or the animation CDN is unavailable.
+    // GSAP owns the hidden starting state only after it has loaded successfully.
+    gsap.set(profilePic, { opacity: 0, x: 10 });
+
+    profileTextContainer.forEach((group) => {
+        gsap.set(group.querySelectorAll("h3, p, .link_group"), {
+            opacity: 0,
+            x: -10,
+        });
+    });
+
     // ----------------------------------
     // ABOUT ME TIMELINE
     // ----------------------------------
