@@ -11,14 +11,6 @@ const currentPage = window.location.pathname
 const isExperiencePage = currentPage === "experience";
 
 if (isExperiencePage) {
-    // Keep content visible when JavaScript or the animation CDN is unavailable.
-    // GSAP owns the hidden starting state only after it has loaded successfully.
-    gsap.set(headerXp, { opacity: 0, scale: 0.98 });
-    gsap.set([headerOneXp, headerTwoXp, resumeBtn], {
-        opacity: 0,
-        y: -10,
-    });
-
     // ----------------------------------
     // MAIN HEADER
     // ----------------------------------
