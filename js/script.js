@@ -5,6 +5,7 @@ import "./animation_js/index_animation.js";
 import "./animation_js/work_animation.js";
 import "./animation_js/experience_animation.js";
 import "./animation_js/me_animation.js";
+import "./animation_js/case_study_animation.js";
 
 import { hamburger, navMenu, nav } from "./dom.js";
 

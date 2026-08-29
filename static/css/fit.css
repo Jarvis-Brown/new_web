@@ -103,6 +103,21 @@ html {
     /*overflow-x: hidden;*/
 }
 
+/* Prevent case-study content from painting before GSAP applies its starting
+   values. The fallback makes the content visible if animation setup fails. */
+.fit_page .main,
+.travel_xp_page .main,
+.main.pottery_page {
+    visibility: hidden;
+    animation: case-study-visibility-fallback 0s 2s forwards;
+}
+
+@keyframes case-study-visibility-fallback {
+    to {
+        visibility: visible;
+    }
+}
+
 /* gif phone */
 
 .phone_container {

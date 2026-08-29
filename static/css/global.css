@@ -154,6 +154,10 @@ nav.no-border {
     border-bottom: none;
 }
 
+nav.no-border .nav_border {
+    display: none;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
