@@ -44,26 +44,34 @@ if (isMePage) {
         // ----------------------------------
 
         if (title) {
-            aboutTL.to(title, {
-                opacity: 1,
-                x: 0,
-                duration: 0.3,
-                ease: "power2.out",
-            });
+            aboutTL.to(
+                title,
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.3,
+                    ease: "power2.out",
+                },
+                groupIndex === 0 ? undefined : "<0.15",
+            );
         }
 
         // ----------------------------------
         // PROFILE PICTURE
-        // Starts with first title
+        // Desktop: moves left/right into place
+        // 768px and below: moves down into place
         // ----------------------------------
 
         if (groupIndex === 0 && profilePic) {
+            const isTablet = window.matchMedia("(max-width: 768px)").matches;
+
             aboutTL.to(
                 profilePic,
                 {
                     opacity: 1,
-                    x: 0,
-                    duration: 0.4,
+                    x: isTablet ? undefined : 0,
+                    y: isTablet ? 0 : undefined,
+                    duration: 3,
                     ease: "power2.out",
                 },
                 "<",
@@ -72,16 +80,20 @@ if (isMePage) {
 
         // ----------------------------------
         // PARAGRAPHS
-        // One after another
+        // Overlap one after another
         // ----------------------------------
 
-        paragraphs.forEach((paragraph) => {
-            aboutTL.to(paragraph, {
-                opacity: 1,
-                x: 0,
-                duration: 0.35,
-                ease: "power2.out",
-            });
+        paragraphs.forEach((paragraph, index) => {
+            aboutTL.to(
+                paragraph,
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.35,
+                    ease: "power2.out",
+                },
+                index === 0 ? "<0.3" : "<0.15",
+            );
         });
 
         // ----------------------------------
@@ -89,12 +101,16 @@ if (isMePage) {
         // ----------------------------------
 
         if (link) {
-            aboutTL.to(link, {
-                opacity: 1,
-                x: 0,
-                duration: 0.35,
-                ease: "power2.out",
-            });
+            aboutTL.to(
+                link,
+                {
+                    opacity: 1,
+                    x: 0,
+                    duration: 0.35,
+                    ease: "power2.out",
+                },
+                "<0.15",
+            );
         }
     });
 
@@ -109,12 +125,16 @@ if (isMePage) {
             transformOrigin: "center",
         });
 
-        aboutTL.to(hrLine, {
-            opacity: 1,
-            scaleX: 1,
-            duration: 0.6,
-            ease: "power2.out",
-        });
+        aboutTL.to(
+            hrLine,
+            {
+                opacity: 1,
+                scaleX: 1,
+                duration: 0.6,
+                ease: "power2.out",
+            },
+            "<0.15",
+        );
     }
 
     // ----------------------------------
@@ -127,12 +147,16 @@ if (isMePage) {
             y: -10,
         });
 
-        aboutTL.to(contactTitle, {
-            opacity: 1,
-            y: 0,
-            duration: 0.3,
-            ease: "power2.out",
-        });
+        aboutTL.to(
+            contactTitle,
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.3,
+                ease: "power2.out",
+            },
+            "<0.15",
+        );
     }
 
     // ----------------------------------
@@ -145,14 +169,22 @@ if (isMePage) {
             scale: 0.8,
         });
 
-        aboutTL.to(iconLink, {
-            opacity: 1,
-            scale: 1,
-            duration: 0.35,
-            stagger: 0.5,
-            ease: "back.out(1.5)",
-        });
+        aboutTL.to(
+            iconLink,
+            {
+                opacity: 1,
+                scale: 1,
+                duration: 0.35,
+                stagger: 0.15,
+                ease: "back.out(1.5)",
+            },
+            "<0.15",
+        );
     }
+
+    // ----------------------------------
+    // ICON HOVERS
+    // ----------------------------------
 
     iconLink.forEach((icon) => {
         icon.addEventListener("mouseenter", () => {
@@ -173,6 +205,10 @@ if (isMePage) {
             });
         });
     });
+
+    // ----------------------------------
+    // LINK HOVER
+    // ----------------------------------
 
     if (linkGroup) {
         linkGroup.addEventListener("mouseenter", () => {
@@ -197,6 +233,5 @@ if (isMePage) {
     // ----------------------------------
 
     const targetDuration = 1.5;
-
     aboutTL.timeScale(aboutTL.duration() / targetDuration);
 }

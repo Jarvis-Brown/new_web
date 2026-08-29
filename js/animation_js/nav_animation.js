@@ -34,6 +34,16 @@ if (!hasSeenNav || isReload) {
         ease: "power1.out",
     });
 
+    if (hamburger) {
+        gsap.from(hamburger, {
+            x: 20,
+            opacity: 0,
+            duration: 0.4,
+            delay: 0.3,
+            ease: "power2.out",
+        });
+    }
+
     tl.from(
         navItems,
         {
