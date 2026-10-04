@@ -106,67 +106,88 @@ if (
     codeWord.length > 0
 ) {
     const getHoveredWord = () =>
-        Array.from(codeWord).find((word) => word.matches(":hover"));
+        stackedSpecialties.matches
+            ? null
+            : Array.from(codeWord).find((word) => word.matches(":hover"));
 
     const positionDescription = (word, updateText = false) => {
-        gsap.killTweensOf(codeWord);
-        const previousTops = new Map(
+        const previousWordTops = new Map(
             Array.from(codeWord, (item) => [
                 item,
                 item.getBoundingClientRect().top,
             ]),
         );
+        gsap.killTweensOf([...codeWord, specialtySentence]);
+        gsap.set(codeWord, { y: 0 });
+        gsap.set(specialtySentence, { y: 0 });
 
         if (updateText && word) {
             specialtySentence.textContent = word.dataset.description;
         }
 
         const isInline = stackedSpecialties.matches && Boolean(word);
+        const sentenceGap = 14;
         specialtyDescription.classList.toggle("is-inline", isInline);
 
-        if (isInline) {
-            word.after(specialtyDescription);
-        } else {
-            specialties.after(specialtyDescription);
-        }
+        const layoutWordTops = new Map(
+            Array.from(codeWord, (item) => [
+                item,
+                item.getBoundingClientRect().top,
+            ]),
+        );
+        const layoutSentenceTop = specialtySentence.getBoundingClientRect().top;
+        const sentenceY = isInline
+            ? word.getBoundingClientRect().bottom +
+              sentenceGap -
+              layoutSentenceTop
+            : 0;
+        gsap.set(specialtySentence, { y: sentenceY });
 
-        const offsets = new Map();
-        codeWord.forEach((item) => {
-            const offset =
-                previousTops.get(item) - item.getBoundingClientRect().top;
-            if (Math.abs(offset) > 1) {
-                offsets.set(item, offset);
+        const wordShift = isInline
+            ? specialtySentence.getBoundingClientRect().height + sentenceGap
+            : 0;
+        const activeIndex = Array.from(codeWord).indexOf(word);
+        let hasWordMovement = false;
+        const wordMoveDuration = 0.3;
+
+        codeWord.forEach((item, index) => {
+            const startY =
+                previousWordTops.get(item) - layoutWordTops.get(item);
+            const targetY = isInline && index > activeIndex ? wordShift : 0;
+
+            gsap.set(item, { y: startY });
+            if (Math.abs(startY - targetY) > 1) {
+                hasWordMovement = true;
+                gsap.to(item, {
+                    y: targetY,
+                    duration: wordMoveDuration,
+                    ease: "power2.out",
+                    overwrite: "auto",
+                });
             }
         });
 
-        if (offsets.size > 0) {
-            const movedWords = Array.from(offsets.keys());
-            gsap.fromTo(
-                movedWords,
-                { y: (index, item) => offsets.get(item) },
-                {
-                    y: 0,
-                    duration: 0.3,
-                    ease: "power2.out",
-                    overwrite: "auto",
-                },
-            );
-        }
+        return { sentenceY, hasWordMovement, wordMoveDuration };
     };
 
     const revealSpecialty = (word) => {
         codeWord.forEach((item) => {
             item.classList.toggle("is-active", item === word);
         });
-        positionDescription(word, true);
-        gsap.killTweensOf(specialtySentence);
-        gsap.to(specialtySentence, {
-            opacity: 1,
-            y: 0,
-            duration: 0.25,
-            ease: "power2.out",
-            overwrite: "auto",
-        });
+        const { sentenceY, hasWordMovement, wordMoveDuration } =
+            positionDescription(word, true);
+        gsap.fromTo(
+            specialtySentence,
+            { opacity: 0, y: sentenceY - 8 },
+            {
+                opacity: 1,
+                y: sentenceY,
+                duration: 0.25,
+                delay: hasWordMovement ? wordMoveDuration : 0,
+                ease: "power2.out",
+                overwrite: "auto",
+            },
+        );
     };
 
     const hideSpecialty = () => {
@@ -181,7 +202,6 @@ if (
         gsap.killTweensOf(specialtySentence);
         gsap.to(specialtySentence, {
             opacity: 0,
-            y: 8,
             duration: 0.18,
             ease: "power2.in",
             overwrite: "auto",
@@ -197,12 +217,41 @@ if (
     };
 
     codeWord.forEach((word) => {
-        word.addEventListener("mouseenter", () => revealSpecialty(word));
-        word.addEventListener("mouseleave", hideSpecialty);
+        word.addEventListener("mouseenter", () => {
+            if (!stackedSpecialties.matches) {
+                revealSpecialty(word);
+            }
+        });
+        word.addEventListener("mouseleave", () => {
+            if (!stackedSpecialties.matches) {
+                hideSpecialty();
+            }
+        });
+        word.addEventListener("click", () => {
+            if (!stackedSpecialties.matches) {
+                return;
+            }
+
+            if (word.classList.contains("is-active")) {
+                hideSpecialty();
+            } else {
+                revealSpecialty(word);
+            }
+        });
     });
 
     stackedSpecialties.addEventListener("change", () => {
-        positionDescription(getHoveredWord());
+        const hoveredWord = getHoveredWord();
+
+        if (
+            !stackedSpecialties.matches &&
+            !hoveredWord &&
+            specialtySentence.style.opacity === "1"
+        ) {
+            hideSpecialty();
+        } else {
+            positionDescription(hoveredWord);
+        }
     });
 }
 
