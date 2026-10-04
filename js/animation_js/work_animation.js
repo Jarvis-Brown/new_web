@@ -15,27 +15,31 @@ gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline();
 
-tl.to(
-    header,
-    {
-        y: 0,
-        opacity: 1,
-        duration: 0.2,
-        ease: "power1.out",
-    },
-    0.17,
-);
+if (header) {
+    tl.to(
+        header,
+        {
+            y: 0,
+            opacity: 1,
+            duration: 0.2,
+            ease: "power1.out",
+        },
+        0.17,
+    );
+}
 
-tl.to(
-    textArea,
-    {
-        y: 0,
-        opacity: 1,
-        duration: 0.25,
-        ease: "power2.out",
-    },
-    0.2,
-);
+if (textArea) {
+    tl.to(
+        textArea,
+        {
+            y: 0,
+            opacity: 1,
+            duration: 0.25,
+            ease: "power2.out",
+        },
+        0.2,
+    );
+}
 
 // -------------------------
 // WORK CARDS

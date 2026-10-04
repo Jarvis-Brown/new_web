@@ -29,6 +29,18 @@ window.addEventListener("DOMContentLoaded", () => {
     console.log("Navbar reset on page load, width:", window.innerWidth);
 });
 
+window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+        const isMobile = window.innerWidth <= 425;
+
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+        nav.classList.remove("no-border");
+        navMenu.classList.remove("with-border");
+        navMenu.style.display = isMobile ? "none" : "flex";
+    }
+});
+
 // ✅ 2. HANDLE WINDOW RESIZE (Prevents menu from staying open after resizing)
 window.addEventListener("resize", () => {
     const isMobile = window.innerWidth <= 425; // Check screen width
@@ -81,20 +93,22 @@ document.querySelectorAll(".nav-link").forEach((n) =>
 
 const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-window.addEventListener("scroll", () => {
-    if (window.pageYOffset > 300) {
-        scrollToTopBtn.classList.add("show");
-    } else {
-        scrollToTopBtn.classList.remove("show");
-    }
-});
-
-scrollToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth",
+if (scrollToTopBtn) {
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add("show");
+        } else {
+            scrollToTopBtn.classList.remove("show");
+        }
     });
-});
+
+    scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
+    });
+}
 
 /* searching for oversized elements */
 [...document.querySelectorAll("*")].reduce((a, e) => {

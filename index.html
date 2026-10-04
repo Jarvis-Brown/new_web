@@ -9,8 +9,8 @@
             content="Jarvis Brown is a Frontend Designer and Animator based in Philadelphia, combining design, code, and motion to create engaging digital experiences."
         />
 
-        <link rel="stylesheet" href="../static/css/global.css" />
-        <link rel="stylesheet" href="../static/css/index.css" />
+        <link rel="stylesheet" href="/static/css/global.css" />
+        <link rel="stylesheet" href="/static/css/index.css" />
     </head>
     <body>
         <nav class="nav-bar">
@@ -19,7 +19,7 @@
                     <a href="index.html"
                         ><img
                             class="logo"
-                            src="../static/images/logo.png"
+                            src="/static/images/logo.png"
                             alt="logo of Jarvis Brown Initials"
                     /></a>
                 </div>
@@ -63,25 +63,52 @@
                 <div class="bell_gif_img">
                     <img
                         id="bell_gif"
-                        src="../static/images/bellgif.gif"
+                        src="/static/images/bellgif.gif"
                         alt="bell swinging gif"
                     />
                 </div>
             </div>
             <div class="specialties">
-                <h3 class="code_word"><span>D</span>esign</h3>
-                <h3 class="code_word"><span>C</span>ode</h3>
-                <h3 class="code_word"><span>M</span>otion</h3>
-                <h3 class="code_word"><span>S</span>torytelling</h3>
+                <h3
+                    class="code_word"
+                    data-description="I create clear, accessible interfaces built around the user's needs."
+                >
+                    <span>D</span>esign
+                </h3>
+                <h3
+                    class="code_word"
+                    data-description="I turn designs into responsive experiences using HTML, CSS, and JavaScript."
+                >
+                    <span>C</span>ode
+                </h3>
+                <h3
+                    class="code_word"
+                    data-description="I use animation to communicate feedback, state changes, and interaction."
+                >
+                    <span>M</span>otion
+                </h3>
+                <h3
+                    class="code_word"
+                    data-description="I use visuals and interaction to guide users through an experience."
+                >
+                    <span>S</span>torytelling
+                </h3>
+            </div>
+            <div
+                class="specialties_description"
+                aria-live="polite"
+                aria-atomic="true"
+            >
+                <p class="specialties_sentence" id="specialties_sentence"></p>
             </div>
         </main>
         <footer>
             <p class="footer_credit">
-                Designed and developed by Jarvis Brown © 2025
+                Designed and developed by Jarvis Brown © 2026
             </p>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
-        <script type="module" src="../js/script.js"></script>
+        <script type="module" src="/js/script.js"></script>
     </body>
 </html>

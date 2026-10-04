@@ -12,11 +12,11 @@ gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline();
 
-const navigation = performance.getEntriesByType("navigation")[0];
-
-const isReload = navigation?.type === "reload";
+const navigationEntry = performance.getEntriesByType("navigation")[0];
+const isReload = navigationEntry?.type === "reload";
 const hasSeenNav = sessionStorage.getItem("navAnimated");
 
+// NAV ENTRANCE ANIMATION
 if (!hasSeenNav || isReload) {
     tl.from(navBorder, {
         scaleX: 0,
@@ -57,10 +57,37 @@ if (!hasSeenNav || isReload) {
     );
 
     sessionStorage.setItem("navAnimated", "true");
+} else {
+    // Navigation has already animated.
+    // Remove any leftover GSAP animation styles.
+    gsap.set([logo, navBorder, navItems], {
+        clearProps: "transform,opacity",
+    });
+
+    if (hamburger) {
+        gsap.set(hamburger, {
+            clearProps: "transform,opacity",
+        });
+    }
 }
 
-// Keep this animation independent from the navigation timeline. A tween inside
-// a timeline cannot also have ScrollTrigger control its playhead reliably.
+// BROWSER BACK / FORWARD
+window.addEventListener("pageshow", (event) => {
+    if (event.persisted) {
+        const navTargets = [logo, navBorder, ...navItems, hamburger].filter(
+            Boolean,
+        );
+
+        tl.kill();
+        gsap.killTweensOf(navTargets);
+        gsap.set(navTargets, {
+            clearProps: "transform,opacity",
+        });
+        gsap.set(navItems, { opacity: 1 });
+    }
+});
+
+// FOOTER ANIMATION
 if (footer) {
     gsap.to(footer, {
         opacity: 1,
@@ -76,6 +103,7 @@ if (footer) {
     });
 }
 
+// LOGO HOVER
 logo.addEventListener("mouseenter", () => {
     gsap.to(logo, {
         rotation: -15,
@@ -92,6 +120,7 @@ logo.addEventListener("mouseleave", () => {
     });
 });
 
+// NAV ITEM HOVER
 navItems.forEach((item) => {
     item.addEventListener("mouseenter", () => {
         gsap.to(item, {

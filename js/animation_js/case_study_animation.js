@@ -33,9 +33,8 @@ if (animatedCaseStudies.has(pageName)) {
         const caseStudyButtons = main.querySelectorAll(
             ".travel-proto-btn, .pottery-proto-btn, .honey-proto-btn",
         );
-        const usesStackedLayout = window.matchMedia(
-            "(max-width: 767px)",
-        ).matches;
+        const usesStackedLayout =
+            window.matchMedia("(max-width: 767px)").matches;
 
         // A target belongs to its nearest nested content group. This prevents
         // long sections (lists, personas, and screen collections) from
@@ -77,18 +76,22 @@ if (animatedCaseStudies.has(pageName)) {
 
                 targets.forEach((target) => animatedElements.add(target));
 
-                gsap.set([...text, ...listItems], {
-                    autoAlpha: 0,
-                    x: -10,
-                    willChange: "transform, opacity",
-                });
+                if (text.length > 0 || listItems.length > 0) {
+                    gsap.set([...text, ...listItems], {
+                        autoAlpha: 0,
+                        x: -10,
+                        willChange: "transform, opacity",
+                    });
+                }
 
-                gsap.set(media, {
-                    autoAlpha: 0,
-                    scale: 0.92,
-                    transformOrigin: "50% 50%",
-                    willChange: "transform, opacity",
-                });
+                if (media.length > 0) {
+                    gsap.set(media, {
+                        autoAlpha: 0,
+                        scale: 0.92,
+                        transformOrigin: "50% 50%",
+                        willChange: "transform, opacity",
+                    });
+                }
 
                 const reveal = gsap.timeline({
                     defaults: {
@@ -124,9 +127,7 @@ if (animatedCaseStudies.has(pageName)) {
                                 x: isMedia ? undefined : 0,
                                 scale: isMedia ? 1 : undefined,
                                 duration: isMedia ? 0.55 : 0.45,
-                                ease: isMedia
-                                    ? "back.out(1.35)"
-                                    : "power2.out",
+                                ease: isMedia ? "back.out(1.35)" : "power2.out",
                                 clearProps: "transform,willChange",
                             },
                             index === 0 ? 0 : "<0.12",

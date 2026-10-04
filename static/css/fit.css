@@ -5,6 +5,7 @@
     --bullet-color: #f6af50;
     --travel-main: #997fce;
     --travel-accent: #00cecb;
+    --travel-accent-hover: #049290;
     --travel-accent-2: #ff508a;
     --games-main: #366a7d;
     --games-accent: #42e858;
@@ -17,6 +18,7 @@
     --tunes-gray: #cbcbcd;
     --white: #ffffff;
     --pottery-brown: #807440;
+    --pottery-dark-brown: #615832;
     --pottery-light-brown: #bfb78f;
     --pottery-purple: #7171aa;
     --pottery-light-purple: #ccccff;
@@ -25,6 +27,7 @@
     --honey-mid-brown: #ffd188;
     --honey-light-brown: #ffe2b3;
     --honey-accent: #ff5547;
+    --honey-accent-hover: #a8382d;
     --honey-outline: #ffa250;
     --honey-inside: #ffe165;
 }
@@ -546,9 +549,9 @@ html {
 }
 
 .color_row {
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
     padding-bottom: 20px;
 }
 
@@ -896,7 +899,7 @@ html {
 }
 
 .travel-proto-btn:hover {
-    background-color: var(--travel-accent-2);
+    background-color: var(--travel-accent-hover);
     color: white;
 }
 
@@ -930,7 +933,7 @@ html {
 }
 
 .pottery-proto-btn:hover {
-    background-color: var(--pottery-light-brown);
+    background-color: var(--pottery-dark-brown);
     color: white;
 }
 
@@ -947,7 +950,7 @@ html {
 }
 
 .honey-proto-btn:hover {
-    background-color: var(--honey-outline);
+    background-color: var(--honey-accent-hover);
     color: white;
 }
 
@@ -1486,6 +1489,11 @@ html {
     .mood_design_img {
         gap: 10px;
     }
+
+    .color_row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
 }
 
 @media (max-width: 375px) {
@@ -1494,7 +1502,8 @@ html {
     }
 
     .color_row {
-        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
 
     .honey_overview_img {
