@@ -183,12 +183,8 @@ h2 {
     }
 
     .specialties_description {
-        min-height: 6.5rem;
+        min-height: 5.5rem;
         margin-top: -1.5rem;
-    }
-
-    .specialties_description.is-inline {
-        place-items: start center;
     }
 
     .specialties_sentence {

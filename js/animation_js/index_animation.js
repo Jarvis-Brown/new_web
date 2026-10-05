@@ -105,10 +105,13 @@ if (
     specialties &&
     codeWord.length > 0
 ) {
+    let clickPinnedWord = null;
+    let clickDismissedWord = null;
+
     const getHoveredWord = () =>
-        stackedSpecialties.matches
-            ? null
-            : Array.from(codeWord).find((word) => word.matches(":hover"));
+        Array.from(codeWord).find(
+            (word) => word !== clickDismissedWord && word.matches(":hover"),
+        );
 
     const positionDescription = (word, updateText = false) => {
         const previousWordTops = new Map(
@@ -125,25 +128,21 @@ if (
             specialtySentence.textContent = word.dataset.description;
         }
 
-        const isInline = stackedSpecialties.matches && Boolean(word);
-        const sentenceGap = 14;
-        specialtyDescription.classList.toggle("is-inline", isInline);
-
+        const isStacked = stackedSpecialties.matches && Boolean(word);
+        const sentenceGap = 10;
         const layoutWordTops = new Map(
             Array.from(codeWord, (item) => [
                 item,
                 item.getBoundingClientRect().top,
             ]),
         );
-        const layoutSentenceTop = specialtySentence.getBoundingClientRect().top;
-        const sentenceY = isInline
-            ? word.getBoundingClientRect().bottom +
-              sentenceGap -
-              layoutSentenceTop
+        const sentenceTop = specialtySentence.getBoundingClientRect().top;
+        const sentenceY = isStacked
+            ? word.getBoundingClientRect().bottom + sentenceGap - sentenceTop
             : 0;
         gsap.set(specialtySentence, { y: sentenceY });
 
-        const wordShift = isInline
+        const wordShift = isStacked
             ? specialtySentence.getBoundingClientRect().height + sentenceGap
             : 0;
         const activeIndex = Array.from(codeWord).indexOf(word);
@@ -153,7 +152,7 @@ if (
         codeWord.forEach((item, index) => {
             const startY =
                 previousWordTops.get(item) - layoutWordTops.get(item);
-            const targetY = isInline && index > activeIndex ? wordShift : 0;
+            const targetY = isStacked && index > activeIndex ? wordShift : 0;
 
             gsap.set(item, { y: startY });
             if (Math.abs(startY - targetY) > 1) {
@@ -218,40 +217,34 @@ if (
 
     codeWord.forEach((word) => {
         word.addEventListener("mouseenter", () => {
-            if (!stackedSpecialties.matches) {
+            clickDismissedWord = null;
+            if (clickPinnedWord && clickPinnedWord !== word) {
+                clickPinnedWord = null;
+            }
+            if (clickPinnedWord !== word) {
                 revealSpecialty(word);
             }
         });
         word.addEventListener("mouseleave", () => {
-            if (!stackedSpecialties.matches) {
-                hideSpecialty();
-            }
-        });
-        word.addEventListener("click", () => {
-            if (!stackedSpecialties.matches) {
+            if (clickPinnedWord === word) {
                 return;
             }
-
-            if (word.classList.contains("is-active")) {
+            if (clickDismissedWord === word) {
+                clickDismissedWord = null;
+            }
+            hideSpecialty();
+        });
+        word.addEventListener("click", () => {
+            if (clickPinnedWord === word) {
+                clickPinnedWord = null;
+                clickDismissedWord = word.matches(":hover") ? word : null;
                 hideSpecialty();
             } else {
+                clickPinnedWord = word;
+                clickDismissedWord = null;
                 revealSpecialty(word);
             }
         });
-    });
-
-    stackedSpecialties.addEventListener("change", () => {
-        const hoveredWord = getHoveredWord();
-
-        if (
-            !stackedSpecialties.matches &&
-            !hoveredWord &&
-            specialtySentence.style.opacity === "1"
-        ) {
-            hideSpecialty();
-        } else {
-            positionDescription(hoveredWord);
-        }
     });
 }
 
