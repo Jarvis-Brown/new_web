@@ -11,6 +11,7 @@ const animatedCaseStudies = new Set([
     "travel_xp",
     "honey_split",
     "pottery",
+    "pathophysiology",
 ]);
 
 if (animatedCaseStudies.has(pageName)) {

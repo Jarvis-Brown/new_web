@@ -30,6 +30,7 @@
     --honey-accent-hover: #a8382d;
     --honey-outline: #ffa250;
     --honey-inside: #ffe165;
+    --engage-main: #2097ac;
 }
 
 h3 {
@@ -60,6 +61,11 @@ h3 {
 
 .honey_page h3 {
     color: var(--honey-accent);
+}
+
+.ascend_page h3,
+h4 {
+    color: var(--engage-main);
 }
 
 h4 {
@@ -200,6 +206,11 @@ html {
 
 .pottery_user_need_img {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.design_handoff {
+    height: 200px;
+    max-height: 100%;
 }
 
 /* all info sections */
@@ -411,6 +422,10 @@ html {
 
 .honey_page .list ul li::before {
     border: 2px solid var(--honey-outline);
+}
+
+.ascend_page .list ul li::before {
+    border: 2px solid var(--engage-main);
 }
 
 /* User Stories*/
@@ -841,6 +856,10 @@ html {
     height: 500px;
 }
 
+.design_handoff {
+    height: 500px;
+}
+
 .final_phone {
     display: flex;
     justify-content: center;
@@ -863,6 +882,10 @@ html {
 }
 
 .tunes_page .fit_ios_final {
+    height: 400px;
+}
+
+.design_handoff {
     height: 400px;
 }
 
@@ -1265,6 +1288,11 @@ html {
         height: 350px;
     }
 
+    .design_handoff {
+    height: 80px;
+    }
+}
+
     /* -- Your Tunes Designs -- */
 
     .tunes_page .native_icon_container {
@@ -1280,6 +1308,12 @@ html {
     .pottery_page .fit_ios_final {
         max-height: 200px;
     }
+
+    .design_handoff {
+    max-height: 80px;
+    }
+
+    
 
     /* -- Travel XP User Feedback -- */
 
@@ -1424,6 +1458,10 @@ html {
         height: 350px;
     }
 
+    .design_handoff {
+        height: 60px;
+    }
+
     .proto-text {
         font-size: 20px;
     }
@@ -1493,6 +1531,10 @@ html {
     .color_row {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
+    }
+
+    .design_handoff {
+        height: 30px;
     }
 }
 
@@ -1583,5 +1625,99 @@ html {
 
     .travel_icons {
         width: 250px;
+    }
+
+    .design_handoff {
+        height: 40px;
+    }
+}
+
+.main.ascend_page {
+    width: min(calc(100% - 4rem), 90rem);
+    margin-inline: auto;
+}
+
+.ascend_page img,
+.ascend_page video {
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ascend_page .design_handoff {
+    box-shadow: none;
+}
+
+.ascend_page > .info_section:first-child {
+    display: grid;
+    grid-template-areas:
+        "media"
+        "content";
+    grid-template-columns: minmax(0, 1fr);
+    gap: clamp(1.5rem, 4vw, 3rem);
+}
+
+.ascend_page > .info_section:first-child > .ascend_hero_img {
+    grid-area: media;
+    width: min(100%, 44rem);
+    height: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.ascend_page > .info_section:first-child > .text_container {
+    grid-area: content;
+    min-width: 0;
+}
+
+.ascend_page .list_pic_container {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: clamp(1rem, 3vw, 3rem);
+}
+
+.ascend_page .list,
+.ascend_page .pic_container {
+    min-width: 0;
+}
+
+.ascend_page .pic_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ascend_page .pic_container > img,
+.ascend_page .pic_container > video,
+.ascend_page .final_phone > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
+.ascend_page .final_phone > img {
+    width: auto;
+    max-width: 100%;
+}
+
+.ascend_page .final_phone > .ascend_process_img {
+    width: min(100%, 44rem);
+}
+
+@media (max-width: 767px) {
+    .main.ascend_page {
+        width: calc(100% - 2rem);
+    }
+
+    .ascend_page .list_pic_container {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ascend_page .pic_container > img,
+    .ascend_page .pic_container > video {
+        width: min(100%, 42rem);
     }
 }
