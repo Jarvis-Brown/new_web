@@ -68,6 +68,10 @@ h4 {
     color: var(--engage-main);
 }
 
+.pottery_page h4 {
+    color: var(--pottery-brown)
+}
+
 h4 {
     font-size: 25px;
 }
@@ -420,6 +424,15 @@ html {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.pottery_page .pottery_movement_video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 75vh;
+    object-fit: contain;
+}
+
 .honey_page .list ul li::before {
     border: 2px solid var(--honey-outline);
 }
@@ -548,6 +561,18 @@ html {
 
 .pottery_design_p {
     padding-bottom: 10px;
+}
+
+.pottery_page .pottery_takeaway_layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 2rem;
+}
+
+.pottery_page .pottery_takeaway_img {
+    max-width: 70%;
+    height: auto;
 }
 
 /*Native App Designs*/
@@ -1424,6 +1449,10 @@ html {
         grid-template-columns: 1fr;
     }
 
+    .pottery_page .pottery_takeaway_layout {
+        grid-template-columns: 1fr;
+    }
+
     .diagram_img {
         height: 400px;
     }
@@ -1638,7 +1667,7 @@ html {
 }
 
 .ascend_page img,
-.ascend_page video {
+.ascend_page video, .pottery_page video {
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -1718,6 +1747,10 @@ html {
 
     .ascend_page .pic_container > img,
     .ascend_page .pic_container > video {
+        width: min(100%, 42rem);
+    }
+
+    .pottery_page .pottery_movement_video {
         width: min(100%, 42rem);
     }
 }

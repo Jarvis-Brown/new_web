@@ -120,13 +120,14 @@
                         <div class="title_container"><h3>Challenge</h3></div>
                         <div>
                             <p>
-                                The artist needed a professional portfolio that
-                                would let her showcase new ceramic work without
-                                relying on a developer every time the gallery
-                                changed. The challenge was to create a minimal
-                                visual experience for visitors while also giving
-                                her a simple and secure way to manage the site
-                                herself. Some of the biggest challenges
+                                The artist needed a professional portfolio to
+                                showcase her ceramic work while maintaining the
+                                ability to update her gallery independently. The
+                                challenge was to create a minimalist, visually
+                                engaging website that highlighted her artwork
+                                while providing a secure and easy-to-use system
+                                for managing images without relying on a
+                                developer. The main technical challenges
                                 included:
                             </p>
                         </div>
@@ -138,32 +139,52 @@
                             <div class="list_pic_container">
                                 <div class="list">
                                     <ul>
+                                        <h4>Firebase Integration</h4>
                                         <li>
-                                            Figuring out how to store and manage
-                                            image data using Firebase, including
-                                            uploads, deletions, and tracking
-                                            sort order.
+                                            Learning how to use Firebase Storage
+                                            and Firestore to upload, delete,
+                                            organize, and manage gallery images.
                                         </li>
+                                    </ul>
+
+                                    <ul>
+                                        <h4>Drag-and-Drop Functionality</h4>
                                         <li>
-                                            Implementing a drag-and-drop
-                                            sortable gallery, something I hadn’t
-                                            done before and had to piece
-                                            together from documentation and
-                                            community examples.
+                                            Implementing a gallery that allows
+                                            the artist to rearrange images while
+                                            saving their updated order.
                                         </li>
+                                    </ul>
+                                    <ul>
+                                        <h4>Secure Admin Access</h4>
                                         <li>
                                             Setting up Firebase Authentication
-                                            to protect admin-only functionality.
+                                            so only authorized users could
+                                            access the gallery management
+                                            features.
                                         </li>
+                                    </ul>
+                                    <ul>
+                                        <h4>Debugging and Problem-Solving</h4>
                                         <li>
-                                            Learning to problem-solve without
-                                            step-by-step instructions, often
-                                            debugging JavaScript or Firebase
-                                            behaviors through trial and error.
+                                            Troubleshooting JavaScript and
+                                            Firebase issues by researching
+                                            documentation, testing solutions,
+                                            and refining the functionality.
                                         </li>
                                     </ul>
                                 </div>
-
+                                <div class="pic_container">
+                                    <video
+                                        class="pottery_movement_video"
+                                        src="video/pottery_movement_video.mp4"
+                                        autoplay
+                                        muted
+                                        loop
+                                        playsinline
+                                    ></video>
+                                </div>
+                                <!--
                                 <div class="pic_container">
                                     <img
                                         class="user_need_img"
@@ -171,6 +192,7 @@
                                         alt="image of javascript code"
                                     />
                                 </div>
+                                -->
                             </div>
                         </div>
                     </div>
@@ -182,14 +204,14 @@
                         <div class="title_container"><h3>User Needs</h3></div>
                         <div>
                             <p>
-                                Before starting the design, I worked closely
-                                with the artist to understand how she wanted to
-                                use the site both as a portfolio for showcasing
-                                her work and as a tool she could manage herself.
-                                The goal was to create a minimal, elegant
-                                experience for visitors while also giving her
-                                control over the content without needing
-                                technical help.
+                                Through conversations with the artist, I
+                                identified the key requirements for the website.
+                                She wanted a clean, professional portfolio that
+                                reflected her personal style, showcased her
+                                ceramic work, and provided a straightforward way
+                                to manage her gallery. These discussions helped
+                                guide both the visual design and the
+                                functionality of the website.
                             </p>
                         </div>
                     </div>
@@ -203,22 +225,22 @@
                                         <li>
                                             A clean, professional website that
                                             showcases ceramic work across
-                                            devices
+                                            devices.
                                         </li>
                                         <li>
                                             An easy way for the artist to
                                             upload, reorder, and remove images
                                             without using a third-party Content
-                                            Management System
+                                            Management System.
                                         </li>
                                         <li>
                                             Minimalist branding and elegant
-                                            typography
+                                            typography.
                                         </li>
                                         <li>
-                                            The ability to privately manage
-                                            content without needing technical
-                                            knowledge
+                                            Secure access to gallery management
+                                            features through an authenticated
+                                            admin interface.
                                         </li>
                                     </ul>
                                 </div>
@@ -239,14 +261,25 @@
                 <div class="text_container">
                     <div class="info_section">
                         <div class="title_container"><h3>Solution</h3></div>
-                        <div>
+                        <div class="pottery_design_p">
                             <p>
-                                I designed and developed a fully responsive
-                                single-page site using HTML, CSS, JavaScript,
-                                and Firebase. The entire backend is invisible to
-                                visitors, but powerful enough for the artist to
-                                update her gallery from any device. Key features
-                                include:
+                                I designed and developed a responsive portfolio
+                                website using HTML, CSS, JavaScript, and
+                                Firebase. The site features a custom admin
+                                interface that allows the artist to upload,
+                                delete, and rearrange gallery images without
+                                needing to modify code or rely on a developer.
+                            </p>
+                        </div>
+                        <div class="pottery_design_p">
+                            <p>
+                                By integrating Firebase Authentication, Storage,
+                                and Firestore, I created a system that securely
+                                manages artwork while keeping the visitor
+                                experience simple and visually focused. The
+                                finished website gives the artist greater
+                                control over her portfolio, allowing her to keep
+                                her gallery updated independently.
                             </p>
                         </div>
                     </div>
@@ -284,7 +317,7 @@
                                     <img
                                         class="user_need_img"
                                         src="/static/images/Pottery/fetching_images_code.png"
-                                        alt="image of javascript code"
+                                        alt="JavaScript code for retrieving pottery gallery images from Firebase"
                                     />
                                 </div>
                             </div>
@@ -299,18 +332,33 @@
                     </div>
                     <div class="pottery_design_p">
                         <p>
-                            To align with the artist’s vision, I collaborated
-                            closely with her to select a color palette that
-                            reflected earthy tones and her personal preferences.
-                            Typography choices blended elegance and warmth,
-                            using a serif font for sophistication and a
-                            handwritten script for personality. I kept the
-                            layout minimal and spacious so the interface would
-                            not compete with the artwork, allowing each piece to
-                            remain the focus while maintaining a consistent
-                            visual identity across the site.
+                            I worked closely with the artist to develop a visual
+                            direction that reflected her personal style while
+                            keeping her ceramic work as the main focus. The
+                            color palette combines muted lavender tones with
+                            earthy greens and warm neutrals, creating a balance
+                            between creativity and a natural, handcrafted
+                            aesthetic.
                         </p>
                     </div>
+                    <div class="pottery_design_p">
+                        <p>
+                            For typography, I paired Cormorant Garamond with
+                            Brittany Signature to combine elegance with a
+                            personal, handmade feel. I also used generous
+                            spacing and a minimalist layout to give each ceramic
+                            piece room to stand out without competing with
+                            unnecessary visual elements.
+                        </p>
+                    </div>
+                    <div class="pottery_design_p">
+                        <p>
+                            These design decisions helped create a cohesive
+                            experience that reflects the artist's identity while
+                            keeping the website simple and easy to navigate.
+                        </p>
+                    </div>
+
                     <div class="typography_color_container">
                         <div class="typography_container">
                             <div class="sub_header">
@@ -455,51 +503,55 @@
                 <div class="text_container">
                     <div class="info_section">
                         <div class="title_container"><h3>Takeaways</h3></div>
-                        <div>
-                            <p>
-                                This project was a turning point in my journey
-                                as a frontend designer and developer. It also
-                                reinforced the value of close collaboration and
-                                listening to feedback, even for personal
-                                projects. This case study is a reflection of
-                                both creative flexibility and technical growth.
-                                I gained hands-on experience with:
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="info_section">
-                    <div class="list_info_container">
-                        <div class="list_info">
-                            <div class="list_pic_container">
-                                <div class="list">
-                                    <ul>
-                                        <li>
-                                            Working with Firebase Storage,
-                                            Firestore, and Authentication
-                                        </li>
-                                        <li>
-                                            Structuring dynamic JavaScript for
-                                            real-world functionality
-                                        </li>
-                                        <li>
-                                            Solving UI/UX problems through both
-                                            design and code
-                                        </li>
-                                        <li>
-                                            Learning how to ship a real product
-                                            while learning on the fly
-                                        </li>
-                                    </ul>
+                        <div class="pottery_takeaway_layout">
+                            <div>
+                                <div class="pottery_design_p">
+                                    <p>
+                                        This project strengthened my ability to
+                                        approach design and development as one
+                                        connected process. Working directly with
+                                        the artist taught me the importance of
+                                        balancing visual design with
+                                        functionality, ensuring the website was
+                                        both visually appealing and easy for her
+                                        to manage independently.
+                                    </p>
                                 </div>
-
-                                <div class="pic_container">
-                                    <img
-                                        class="user_need_img"
-                                        src="/static/images/Pottery/pottery_tablet_contact_page.png"
-                                        alt="image of responsive pottery contact page"
-                                    />
+                                <div class="pottery_design_p">
+                                    <p>
+                                        One of my biggest learning experiences
+                                        was integrating Firebase to create a
+                                        custom gallery management system. Rather
+                                        than relying on a traditional content
+                                        management system, I used Firebase
+                                        Authentication, Storage, and Firestore
+                                        to build a solution tailored to the
+                                        artist's needs. This gave me practical
+                                        experience working with cloud services,
+                                        managing dynamic content, and
+                                        troubleshooting JavaScript
+                                        functionality.
+                                    </p>
                                 </div>
+                                <div class="pottery_design_p">
+                                    <p>
+                                        Moving forward, I would focus on making
+                                        the admin interface even more intuitive
+                                        and improving the image management
+                                        workflow as the gallery continues to
+                                        grow. This project reinforced the value
+                                        of building websites that are not only
+                                        visually engaging but also practical for
+                                        the people using them.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="pic_container">
+                                <img
+                                    class="user_need_img pottery_takeaway_img"
+                                    src="/static/images/Pottery/pottery_tablet_contact_page.png"
+                                    alt="image of responsive pottery contact page"
+                                />
                             </div>
                         </div>
                     </div>
