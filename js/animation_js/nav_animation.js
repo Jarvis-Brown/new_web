@@ -87,8 +87,11 @@ window.addEventListener("pageshow", (event) => {
     }
 });
 
-// FOOTER ANIMATION
-if (footer) {
+export function animateFooter() {
+    if (!footer) {
+        return;
+    }
+
     gsap.to(footer, {
         opacity: 1,
         scale: 1,
@@ -102,6 +105,8 @@ if (footer) {
         },
     });
 }
+
+animateFooter();
 
 // LOGO HOVER
 logo.addEventListener("mouseenter", () => {
@@ -117,24 +122,5 @@ logo.addEventListener("mouseleave", () => {
         rotation: 0,
         duration: 0.5,
         ease: "power1",
-    });
-});
-
-// NAV ITEM HOVER
-navItems.forEach((item) => {
-    item.addEventListener("mouseenter", () => {
-        gsap.to(item, {
-            y: -1,
-            duration: 0.2,
-            ease: "power1",
-        });
-    });
-
-    item.addEventListener("mouseleave", () => {
-        gsap.to(item, {
-            y: 0,
-            duration: 0.3,
-            ease: "power1",
-        });
     });
 });

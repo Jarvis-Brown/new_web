@@ -6,6 +6,7 @@ import "./animation_js/work_animation.js";
 import "./animation_js/experience_animation.js";
 import "./animation_js/me_animation.js";
 import "./animation_js/case_study_animation.js";
+import "./navigation.js";
 
 import { hamburger, navMenu, nav } from "./dom.js";
 
@@ -82,33 +83,12 @@ document.querySelectorAll(".nav-link").forEach((n) =>
         nav.classList.remove("no-border");
         navMenu.classList.remove("with-border");
 
-        // ✅ Ensure menu hides when a link is clicked
-        navMenu.style.display = "none";
+        navMenu.style.display =
+            window.innerWidth <= 425 ? "none" : "flex";
 
         console.log("Nav link clicked, menu closed.");
     }),
 );
-
-// Scroll Button
-
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-if (scrollToTopBtn) {
-    window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 300) {
-            scrollToTopBtn.classList.add("show");
-        } else {
-            scrollToTopBtn.classList.remove("show");
-        }
-    });
-
-    scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    });
-}
 
 /* searching for oversized elements */
 [...document.querySelectorAll("*")].reduce((a, e) => {

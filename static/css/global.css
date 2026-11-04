@@ -113,6 +113,10 @@ html {
 
 /* NAVBAR */
 
+@view-transition {
+    navigation: auto;
+}
+
 nav {
     position: fixed;
     display: flex;
@@ -121,7 +125,14 @@ nav {
     width: 100%;
     background-color: var(--background-color);
     z-index: 9999 !important;
+    view-transition-name: site-navigation;
     /* inset: 0 0 90%; */
+}
+
+::view-transition-group(site-navigation),
+::view-transition-old(site-navigation),
+::view-transition-new(site-navigation) {
+    animation: none;
 }
 
 .nav-content {
