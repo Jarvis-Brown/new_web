@@ -12,44 +12,51 @@ gsap.registerPlugin(ScrollTrigger);
 
 const tl = gsap.timeline();
 
-const navigationEntry = performance.getEntriesByType("navigation")[0];
-const isReload = navigationEntry?.type === "reload";
-const hasSeenNav = sessionStorage.getItem("navAnimated");
+const shouldAnimateNav = document.documentElement.classList.contains(
+    "nav-entrance-pending",
+);
 
 // NAV ENTRANCE ANIMATION
-if (!hasSeenNav || isReload) {
-    tl.from(navBorder, {
-        scaleX: 0,
-        opacity: 0,
+if (shouldAnimateNav) {
+    gsap.set(navBorder, { scaleX: 0, opacity: 0 });
+    gsap.set(logo, { x: "-80%", rotation: -100, opacity: 0 });
+    gsap.set(navItems, { x: -8, opacity: 0 });
+    if (hamburger) {
+        gsap.set(hamburger, { x: 20, opacity: 0 });
+    }
+
+    tl.to(navBorder, {
+        scaleX: 1,
+        opacity: 1,
         duration: 0.6,
         ease: "power2.out",
     });
 
-    gsap.from(logo, {
-        x: "-80%",
+    gsap.to(logo, {
+        x: 0,
+        rotation: 0,
+        opacity: 1,
         delay: 0.2,
         duration: 0.5,
-        rotation: -100,
-        opacity: 0,
         ease: "power1.out",
     });
 
     if (hamburger) {
-        gsap.from(hamburger, {
-            x: 20,
-            opacity: 0,
+        gsap.to(hamburger, {
+            x: 0,
+            opacity: 1,
             duration: 0.4,
             delay: 0.3,
             ease: "power2.out",
         });
     }
 
-    tl.from(
+    tl.to(
         navItems,
         {
-            x: -8,
+            x: 0,
             duration: 0.4,
-            opacity: 0,
+            opacity: 1,
             ease: "power2.out",
             stagger: 0.1,
         },
@@ -70,6 +77,8 @@ if (!hasSeenNav || isReload) {
         });
     }
 }
+
+document.documentElement.classList.remove("nav-entrance-pending");
 
 // BROWSER BACK / FORWARD
 window.addEventListener("pageshow", (event) => {

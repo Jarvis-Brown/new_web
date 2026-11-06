@@ -129,6 +129,10 @@ nav {
     /* inset: 0 0 90%; */
 }
 
+html.nav-entrance-pending .nav-bar {
+    visibility: hidden;
+}
+
 ::view-transition-group(site-navigation),
 ::view-transition-old(site-navigation),
 ::view-transition-new(site-navigation) {
